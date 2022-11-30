@@ -1,44 +1,47 @@
 // Colors
 // ---------------------------------
 // Default
-$color-1: #ffffff;
-$color-2: #f8f9fc;
-$color-3: #f7f9fc;
-$color-4: #e7e7e7;
-$color-5: #b6bdcc;
-$color-6: #afafaf;
-$color-7: #787878;
-$color-8: #74819c;
-$color-9: #495a7d;
-$color-10: #003c84;
-$color-11: #00359e;
-$color-12: #003db7;
-$color-13: #103aae;
-$color-14: #0041ca;
+$color-base-1: #ffffff;
+$color-base-2: #f8f9fc;
+$color-base-3: #e8e8e8;
+$color-base-4: #74819c;
+$color-base-5: #103aae;
+$color-base-6: #1c3374;
+$color-base-7: #030a1a;
+$color-base-8: #102654;
+$color-base-8-op50: rgba(#102654, 0.5);
+$color-base-8-op89: rgba(#102654, 0.89);
+$color-base-9: #ed0233;
+
+// alternate colors
+$color-1: #0041ca;
+$color-2: #d10a42;
+$color-3: #b80027;
+$color-4: #ec0042;
+$color-5: #003d85;
+$color-6: #003eb7;
+
+// Project palette
+$color-7: #f7f9fc;
+$color-8: #b6bdcc;
+$color-9: #afafaf;
+$color-10: #787878;
+$color-11: #495a7d;
+$color-12: #003c84;
+$color-13: #00359e;
+$color-14: #003db7;
 $color-15: #0039db;
 $color-16: #2e35ac;
 $color-17: #13367a;
-$color-18: #1c3374;
-$color-19: #102654;
-$color-20: #0f2554;
-$color-21: #2e2e2e;
-$color-22: #030a1a;
-$color-23: #ec0233;
-$color-24: #ec0042;
-$color-25: #d10a42;
-$color-26: #b80026;
-
-
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
-
-// Project palette
-// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
-// ---------------------------------
+$color-18: #0f2554;
+$color-19: #2e2e2e;
 
 // Gradient
-$main-conic-gradient: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+$main-conic-gradient: conic-gradient(from 130.31deg at 16.03% 39.06%, $color-3 -46.69deg, $color-5 32.24deg, $color-3 313.31deg, $color-5 392.24deg);
+$linear-gradient-1: linear-gradient(44.89deg, $color-5 25.38%, $color-3 74.89%);
+$linear-gradient-2: linear-gradient(97.05deg, $color-base-8 17.6%, $color-6 95.31%);
+$linear-gradient-3: linear-gradient(127.61deg, $color-2 0%, $color-1 45.58%);
+$linear-gradient-4: linear-gradient(142.51deg, $color-2 0%, $color-1 87.33%);
 
 // Typography
 // ---------------------------------
@@ -70,3 +73,8 @@ $vp-1200: 1200px;
 // ---------------------------------
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Indents
+// ---------------------------------
+$primary-indent: 45px;
+$secondary-indent: 15px;
