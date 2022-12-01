@@ -1,14 +1,169 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI-Kit сайта Fitness</title>
-</head>
-<body>
-  <main style="padding: 20px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UI-kit page">
+    <title>UI-kit page for "Fitness" project</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+<body style="background-color: rgb(189, 189, 189); padding: 0;">
+  <main>
+    <div class="container" style="display: flex; flex-direction: column; gap: 40px; padding: 0;">
 
+      <div>
+        <div>Primary button</div>
+        <button class="light-button">Купить абонемент</button>
+      </div>
+
+      <div>
+        <div>Play button</div>
+        <button class="play-button">
+          <span class="play-button__triangle"></span>
+        </button>
+      </div>
+
+      <div>
+        <div>Secondary button</div>
+        <button class="dark-button">Купить абонемент</button>
+      </div>
+
+      <div>
+        <div>Gradient button</div>
+        <button class="gradient-button">Купить абонемент</button>
+      </div>
+
+      <div>
+        <div>Subscription card</div>
+        <div class="subscription-card">
+          <div class="subscription-card__header">
+            <h3>С тренером</h3>
+            <p>12 занятий</p>
+          </div>
+          <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+            <p>5000</p>
+            <span>&#8381;</span>
+          </div>
+          <button class="subscription-card__button dark-button">Купить абонемент</button>
+        </div>
+      </div>
+
+      <div>
+        <div>Trainer card</div>
+        <div class="trainer-card">
+          <div class="trainer-card__front">
+            <picture>
+              <source type="image/webp" srcset="./img/trainers/maria.webp 1x, ./img/trainers/maria@2x.webp 2x">
+              <img width="260" height="294" src="./img/trainers/maria.jpg" alt="Тренер Мария." srcset="./img/trainers/maria@2x.jpg 2x">
+            </picture>
+            <h3>Мария Кетова</h3>
+          </div>
+          <div class="trainer-card__back">
+            <p>Мария Кетова</p>
+            <span>CrossFit</span>
+            <ul>
+              <li>Certified Level 3 Trainer</li>
+              <li>Победитель чемпионата России по CrossFit</li>
+              <li>Опыт — 6 лет</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>Feature card</div>
+        <div class="feature-card">
+          <div class="feature-card__number">
+            <p>900</p>
+            <span>кв/м</span>
+          </div>
+          <div class="feature-card__description">
+            <p>Площадь</p>
+            <span>Занимайтесь без очередей и толпучки</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>Stock card</div>
+        <div class="stock-card">
+          <div class="stock-card__content">
+            <p>Месяц бесплатно</p>
+            <span>Приведи друга, получи <br>абонемент в подарок</span>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>Review card</div>
+        <div class="review-card">
+          <div class="review-card__image">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/anna.webp 1x, ./img/reviews/anna@2x.webp 2x">
+              <img width="80" height="80" src="./img/reviews/anna.jpg" alt="Тренер Мария." srcset="./img/reviews/anna@2x.jpg 2x">
+            </picture>
+          </div>
+          <h3>Анна Орлова</h3>
+          <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+        </div>
+      </div>
+
+      <div>
+        <div>Free training</div>
+        <div class="free-training">
+          <div class="free-training__form">
+            <form method="post" action="https://echo.htmlacademy.ru/" id="free-training-form">
+              <fieldset>
+                <legend>Бесплатное занятие </legend>
+                <div class="free-training__entry-fields">
+                  <div class="free-training__input-wrapper">
+                    <label class="visually-hidden" for="name">Имя.</label>
+                    <input type="text" id="name" title="Допускается ввод только букв" placeholder="Имя" name="name" pattern="^(?!\s*$)[-/', а-яА-Я, a-zA-Z]+$" minlength="2" maxlength="50" required>
+                  </div>
+                  <div class="free-training__input-wrapper">
+                    <label class="visually-hidden" for="phone">Телефон.</label>
+                    <input type="tel" id="phone" placeholder="Телефон" name="phone" title="Допускается ввод только цифр, пробелов и символов +)(-" pattern="\+?[0-9\s\-\(\)]+" maxlength="30" required>
+                  </div>
+                </div>
+                <button class="free-training__button light-button" type="submit" form="free-training-form">Отправить</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>Contacts</div>
+        <div class="contacts">
+          <h2>Контакты</h2>
+          <div class="contacts__content">
+            <div class="contacts__column">
+              <div>
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </div>
+              <div>
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+            </div>
+            <div class="contacts__column">
+              <div>
+                <h3>Телефон:</h3>
+                <a href="tel:+78005555555">8-800-555-55-55</a>
+              </div>
+              <div>
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 </body>
 </html>

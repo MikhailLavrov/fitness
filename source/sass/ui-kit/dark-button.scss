@@ -1,0 +1,17 @@
+.dark-button {
+  padding: 26px;
+
+  color: $color-base-8;
+  text-transform: uppercase;
+
+  box-shadow: 0 0 0 2px currentColor inset;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include hover-focus {
+    box-shadow: none;
+    background: $linear-gradient-1;
+    color: $color-base-1;
+  }
+}

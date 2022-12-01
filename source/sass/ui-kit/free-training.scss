@@ -1,0 +1,103 @@
+.free-training {
+  padding: 56px 103px 70px;
+  background-color: $color-base-8;
+
+  @include vp-1199 {
+    padding: 70px 133px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
+}
+
+.free-training__form {
+  max-width: 410px;
+
+  @include vp-1199 {
+    max-width: 472px;
+  }
+}
+
+.free-training__form legend {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  font-family: $ff-alumni;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: $color-base-1;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.free-training__form fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.free-training__entry-fields {
+  margin-bottom: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @include vp-1199 {
+    gap: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    display: block;
+  }
+}
+
+.free-training__input-wrapper {
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.free-training__input-wrapper input {
+  padding: 10px 0;
+  width: 100%;
+
+  color: $color-base-1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-base-4;
+
+  &::placeholder {
+    color: $color-base-1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.free-training__button {
+  width: 100%;
+}

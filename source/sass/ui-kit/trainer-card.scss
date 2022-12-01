@@ -1,0 +1,94 @@
+.trainer-card {
+  width: 100%;
+  max-width: 260px;
+
+  position: relative;
+
+  background-color: $color-base-8;
+
+  color: $color-base-1;
+
+  @include hover-focus {
+    & .trainer-card__back {
+      display: flex;
+    }
+
+    & .trainer-card__front img {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.trainer-card__front {
+  position: relative;
+}
+
+.trainer-card__front h3 {
+  margin: 0;
+  padding: 30px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+}
+
+.trainer-card__back {
+  height: 100%;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  text-align: center;
+  background-color: $color-base-8-op89;
+  overflow: auto;
+}
+
+.trainer-card__back p {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.trainer-card__back span {
+  margin-bottom: 45px;
+
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-8;
+}
+
+.trainer-card__back ul {
+  margin: 0 auto;
+  padding: 0;
+
+  width: 58%;
+
+  text-align: start;
+
+  @include vp-1199 {
+    width: 59%;
+  }
+
+  @include vp-767 {
+    width: 70%;
+  }
+}
+
+.trainer-card__back li {
+  font-size: 14px;
+  line-height: 150%;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}

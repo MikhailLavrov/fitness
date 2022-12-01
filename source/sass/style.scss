@@ -19,6 +19,20 @@
 @import "blocks/modal";
 @import "blocks/header";
 
+// UI-Kit
+// ---------------------------------
+@import "ui-kit/light-button";
+@import "ui-kit/dark-button";
+@import "ui-kit/play-button";
+@import "ui-kit/gradient-button";
+@import "ui-kit/subscription-card";
+@import "ui-kit/trainer-card";
+@import "ui-kit/feature-card";
+@import "ui-kit/stock-card";
+@import "ui-kit/review-card";
+@import "ui-kit/free-training";
+@import "ui-kit/contacts";
+
 // ---------------------------------
 // ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
 /* @mixin hover-focus {

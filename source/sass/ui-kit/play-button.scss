@@ -1,0 +1,46 @@
+.play-button {
+  padding: 0;
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  background-color: transparent;
+  background-image: url("../img/svg/play-button-border.svg");
+
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 72px;
+    height: 72px;
+
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
+    background: $linear-gradient-1;
+    border-radius: 50%;
+  }
+
+  @include hover-focus {
+    &::after {
+      background: $linear-gradient-4;
+    }
+  }
+}
+
+.play-button__triangle {
+  margin-right: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8.5px 0 8.5px 17px;
+  border-color: transparent transparent transparent $color-base-1;
+  z-index: 5;
+}

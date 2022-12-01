@@ -1,0 +1,123 @@
+.subscription-card {
+  padding: 68px 77px;
+
+  width: 100%;
+  max-width: 442px;
+  height: auto;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 59px;
+
+  color: $color-base-8;
+
+  background-color: $color-base-1;
+
+  @include hover-focus {
+    background: $linear-gradient-4;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 95%;
+      height: 95%;
+      top: 2.5%;
+      left: 2.5%;
+      background-color: $color-base-1;
+    }
+
+    & .subscription-card__button {
+      box-shadow: none;
+      background: $linear-gradient-1;
+      color: $color-base-1;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 68px 118px;
+  }
+
+  @include vp-767 {
+    padding: 55px 42px;
+
+    gap: 50px;
+  }
+}
+
+.subscription-card__header {
+  text-align: center;
+
+  z-index: 5;
+}
+
+.subscription-card__header h3 {
+  margin: 0;
+  margin-bottom: 22px;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+    line-height: 110.16%;
+  }
+}
+
+.subscription-card__header p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.subscription-card__price {
+  padding: 37px 19px 0;
+
+  display: flex;
+
+  background-repeat: no-repeat;
+
+  z-index: 5;
+
+  @include vp-767 {
+    padding: 31px 17px 0;
+  }
+}
+
+.subscription-card__price p {
+  margin: 0;
+  margin-right: 14px;
+
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1;
+  color: $color-base-5;
+
+  z-index: 1;
+
+  @include vp-767 {
+    margin-right: 10px;
+
+    font-size: 48px;
+  }
+}
+
+.subscription-card__price span {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 600;
+
+  z-index: 1;
+}
+
+.subscription-card__button {
+  width: 100%;
+  z-index: 5;
+}
