@@ -4,28 +4,20 @@
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
-// Global
-// ---------------------------------
 @import "variables";
 @import "mixins";
+
+// Global
+// ---------------------------------
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
 
-// Blocks
-// ---------------------------------
-@import "blocks/btn";
-@import "blocks/modal";
-
-@import "blocks/header";
-@import "blocks/hero";
-
 // UI-Kit
 // ---------------------------------
 @import "ui-kit/light-button";
 @import "ui-kit/dark-button";
-@import "ui-kit/play-button";
 @import "ui-kit/gradient-button";
 @import "ui-kit/subscription-card";
 @import "ui-kit/trainer-card";
@@ -34,6 +26,16 @@
 @import "ui-kit/review-card";
 @import "ui-kit/free-training";
 @import "ui-kit/contacts";
+@import "ui-kit/play-button";
+
+// Blocks
+// ---------------------------------
+@import "blocks/btn";
+@import "blocks/modal";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/embed-container";
 
 // ---------------------------------
 // ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах

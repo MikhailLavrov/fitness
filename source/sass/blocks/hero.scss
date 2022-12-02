@@ -47,6 +47,7 @@
   @include vp-1199 {
     grid-template-columns: 115px 188px;
     gap: 20px;
+    justify-self: flex-end;
   }
 
   @include vp-767 {
@@ -72,7 +73,7 @@
     @include vp-767 {
       padding: 0;
       margin-left: auto;
-      max-width: 70%;
+      width: 70%;
     }
   }
 }

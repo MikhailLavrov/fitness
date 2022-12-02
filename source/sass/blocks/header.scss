@@ -23,7 +23,7 @@
 .header__logo {
   transform: translateY(5px);
 
-  @include vp-1199{
+  @include vp-1199 {
     width: 82px;
     height: auto;
 

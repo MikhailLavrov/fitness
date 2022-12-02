@@ -11,6 +11,7 @@
 
   background-color: transparent;
   background-image: url("../img/svg/play-button-border.svg");
+  background-size: cover;
 
   cursor: pointer;
   border: none;
@@ -36,7 +37,7 @@
 }
 
 .play-button__triangle {
-  margin-right: -3px;
+  margin-right: -6px;
   width: 0;
   height: 0;
   border-style: solid;
