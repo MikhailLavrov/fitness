@@ -233,7 +233,7 @@
     top: 47px;
     left: 96px;
 
-    &:after {
+    &::after {
       width: 52px;
       height: 52px;
 
@@ -248,6 +248,6 @@
   }
 
   @include vp-767 {
-    left: calc(50vw - 73px/2);
+    left: calc(50vw - 73px / 2);
   }
 }

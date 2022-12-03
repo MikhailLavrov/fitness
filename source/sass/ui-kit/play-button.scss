@@ -20,11 +20,11 @@
   &::after {
     position: absolute;
     content: "";
-    width: 72px;
-    height: 72px;
+    width: 72%;
+    height: 72%;
 
-    top: calc(50% - 36px);
-    left: calc(50% - 36px);
+    top: 14%;
+    left: 14%;
     background: $linear-gradient-1;
     border-radius: 50%;
   }
@@ -36,12 +36,9 @@
   }
 }
 
-.play-button__triangle {
-  margin-right: -6px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 8.5px 0 8.5px 17px;
-  border-color: transparent transparent transparent $color-base-1;
-  z-index: 5;
+.play-button svg {
+  margin-left: 4px;
+  width: 15%;
+  height: 15%;
+  z-index: 10;
 }

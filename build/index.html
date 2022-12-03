@@ -25,6 +25,33 @@
         <section class="hero">
           <div class="hero__container container">
             <div class="hero__content">
+              <div class="hero__info">
+                <div class="hero__features">
+                  <ul>
+                    <li>Тренажёрный зал</li>
+                    <li>Групповые занятия</li>
+                    <li>Кардио-зона</li>
+                  </ul>
+                </div>
+                <div class="hero__description">
+                  <p>Омск</p>
+                  <h1>Фитнес центр</h1>
+                  <button class="hero__button light-button" type="button">Купить абонемент</button>
+                </div>
+              </div>
+              <div class="hero__image">
+                <picture>
+                  <source type="image/webp" srcset="./img/hero.webp 1x, ./img/hero@2x.webp 2x">
+                  <img width="500" height="556" src="./img/hero.jpg" alt="Спортивный парень." srcset="./img/hero@2x.jpg 2x">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="hero">
+          <div class="hero__container container">
+            <div class="hero__content">
               <div>
                 <ul>
                   <li>Тренажёрный зал</li>
@@ -45,7 +72,7 @@
               </picture>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <section class="about">
           <div class="about__container container">
@@ -70,7 +97,9 @@
                   <img width="364" height="228" src="./img/video-thumb.jpg" alt="Превью картинка видео презентации тренажерного зала." srcset="./img/video-thumb@2x.jpg 2x">
                 </picture>
                 <button class="about__play-button play-button">
-                  <span class="play-button__triangle"></span>
+                  <svg width="17" height="17" role="img" aria-hidden="true" focusable="false" aria-label="Иконка плей.">
+                    <use xlink:href="img/sprite.svg#play-button-triangle"></use>
+                  </svg>
                 </button>
               </div>
             </div>
