@@ -1,8 +1,8 @@
 .subscription-card {
-  padding: 68px 77px;
+  padding: 62px 77px;
 
   width: 100%;
-  max-width: 442px;
+  max-width: 360px;
   height: auto;
 
   position: relative;
@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 59px;
+  gap: 45px;
 
   color: $color-base-8;
 
@@ -24,13 +24,13 @@
       position: absolute;
       content: "";
       width: 95%;
-      height: 95%;
-      top: 2.5%;
+      height: 97%;
+      top: 1.5%;
       left: 2.5%;
       background-color: $color-base-1;
     }
 
-    & .subscription-card__button {
+    & .subscription-card__link {
       box-shadow: none;
       background: $linear-gradient-1;
       color: $color-base-1;
@@ -38,13 +38,16 @@
   }
 
   @include vp-1199 {
-    padding: 68px 118px;
+    padding: 63px 76px 67px;
+    max-width: 442px;
+
+    gap: 47px;
   }
 
   @include vp-767 {
-    padding: 55px 42px;
+    padding: 51px 36px 49px;
 
-    gap: 50px;
+    gap: 38px;
   }
 }
 
@@ -56,14 +59,14 @@
 
 .subscription-card__header h3 {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 26px;
   line-height: 29px;
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     font-size: 22px;
     line-height: 110.16%;
@@ -78,7 +81,7 @@
 }
 
 .subscription-card__price {
-  padding: 37px 19px 0;
+  padding: 37px 10px 0;
 
   display: flex;
 
@@ -86,14 +89,18 @@
 
   z-index: 5;
 
+  @include vp-1199 {
+    padding: 35px 13px 0;
+  }
+
   @include vp-767 {
-    padding: 31px 17px 0;
+    padding: 28px 5px 0;
   }
 }
 
 .subscription-card__price p {
   margin: 0;
-  margin-right: 14px;
+  margin-right: 10px;
 
   font-weight: 700;
   font-size: 60px;
@@ -103,7 +110,8 @@
   z-index: 1;
 
   @include vp-767 {
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 7px;
 
     font-size: 48px;
   }
@@ -115,9 +123,25 @@
   font-weight: 600;
 
   z-index: 1;
+
+  @include vp-767 {
+    font-size: 51px;
+  }
 }
 
-.subscription-card__button {
+.subscription-card__link {
+  padding: 28px;
   width: 100%;
   z-index: 5;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include vp-1199 {
+    max-width: 208px;
+    padding: 26px 0;
+  }
 }

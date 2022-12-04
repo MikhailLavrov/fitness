@@ -37,7 +37,7 @@
                   <p>Омск</p>
                   <h1>Фитнес центр</h1>
                 </div>
-                <button class="hero__button light-button" type="button">Купить абонемент</button>
+                <a class="hero__link light-button" href="#subscriptions">Купить абонемент</a>
               </div>
               <div class="hero__image">
                 <picture>
@@ -79,15 +79,146 @@
           </div>
         </section>
 
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+        <section class="subscriptions" id="subscriptions">
+          <div class="subscriptions__container container">
+            <h2>Абонементы</h2>
+
+            <div class="tabs no-transition-global" data-tabs="parent" data-delay="300">
+              <div class="tabs__controls" data-tabs="controls">
+                <button class="tabs__control" type="button" data-tabs="control">1 месяц</button>
+                <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
+                <button class="tabs__control" type="button" data-tabs="control">12 месяцев</button>
+              </div>
+              <div class="tabs__content" data-tabs="content">
+                <div class="tabs__element" data-tabs="element">
+                  <section class="subscriptions__content">
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>С тренером</h3>
+                        <p>12 занятий</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>5000</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>1700</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>2700</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+
+                  </section>
+                </div>
+                <div class="tabs__element" data-tabs="element">
+                  <section class="subscriptions__content">
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>С тренером</h3>
+                        <p>12 занятий в месяц</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>30000</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>1650</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>2600</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+
+                  </section>
+                </div>
+                <div class="tabs__element" data-tabs="element">
+                  <section class="subscriptions__content">
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>С тренером</h3>
+                        <p>12 занятий в месяц</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>60000</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>1600</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+
+                    <div class="subscription-card">
+                      <div class="subscription-card__header">
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00</p>
+                      </div>
+                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                        <p>2500</p>
+                        <span>&#8381;</span>
+                      </div>
+                      <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+                    </div>
+                    
+                  </section>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
+
       </main>
       <footer>
         <div class="container"></div>

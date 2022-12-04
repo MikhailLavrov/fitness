@@ -13,6 +13,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/data-tabs";
 
 // UI-Kit
 // ---------------------------------
@@ -36,6 +37,8 @@
 @import "blocks/hero";
 @import "blocks/about";
 @import "blocks/embed-container";
+@import "blocks/subscriptions";
+@import "blocks/tabs";
 
 // ---------------------------------
 // ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах

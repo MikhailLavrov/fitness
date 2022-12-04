@@ -453,6 +453,7 @@ html {
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #102654;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -647,6 +648,45 @@ button,
   max-width: 1250px;
 }
 
+[data-tabs=parent] {
+  overflow: hidden;
+}
+
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
 .light-button {
   padding: 21px;
   font-weight: 700;
@@ -705,9 +745,9 @@ button,
 }
 
 .subscription-card {
-  padding: 68px 77px;
+  padding: 62px 77px;
   width: 100%;
-  max-width: 442px;
+  max-width: 360px;
   height: auto;
   position: relative;
   display: -webkit-box;
@@ -723,7 +763,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 59px;
+  gap: 45px;
   color: #102654;
   background-color: #ffffff;
 }
@@ -737,13 +777,13 @@ button,
   position: absolute;
   content: "";
   width: 95%;
-  height: 95%;
-  top: 2.5%;
+  height: 97%;
+  top: 1.5%;
   left: 2.5%;
   background-color: #ffffff;
 }
 
-.subscription-card.focus-visible:focus .subscription-card__button {
+.subscription-card.focus-visible:focus .subscription-card__link {
   -webkit-box-shadow: none;
   box-shadow: none;
   background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
@@ -758,7 +798,7 @@ button,
 
 .subscription-card__header h3 {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 26px;
   line-height: 29px;
@@ -771,7 +811,7 @@ button,
 }
 
 .subscription-card__price {
-  padding: 37px 19px 0;
+  padding: 37px 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,7 +821,7 @@ button,
 
 .subscription-card__price p {
   margin: 0;
-  margin-right: 14px;
+  margin-right: 10px;
   font-weight: 700;
   font-size: 60px;
   line-height: 1;
@@ -796,9 +836,16 @@ button,
   z-index: 1;
 }
 
-.subscription-card__button {
+.subscription-card__link {
+  padding: 28px;
   width: 100%;
   z-index: 5;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .trainer-card {
@@ -1452,7 +1499,7 @@ button,
   text-transform: uppercase;
 }
 
-.hero__button {
+.hero__link {
   padding: 23px;
   margin-left: auto;
   margin-bottom: 43px;
@@ -1460,6 +1507,7 @@ button,
   max-width: 236px;
   display: block;
   grid-column: 1/-1;
+  text-align: center;
 }
 
 .hero__image {
@@ -1481,10 +1529,10 @@ button,
 
 .about {
   padding: 120px 0;
-  min-height: 756px;
 }
 
 .about__container {
+  margin-bottom: 115px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 475px auto;
@@ -1600,6 +1648,91 @@ button,
   height: 100%;
 }
 
+.subscriptions {
+  background-color: #f8f9fc;
+  padding: 120px 0 123px;
+  position: relative;
+}
+
+.subscriptions h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+
+.subscriptions__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.tabs {
+  max-width: 100%;
+}
+
+.tabs__controls {
+  margin: 0 auto;
+  margin-bottom: 38px;
+  -webkit-box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
+  box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
+  width: 100%;
+  max-width: 341px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 46px;
+}
+
+.tabs__control {
+  padding: 13px 0;
+  min-width: auto;
+  color: rgba(16, 38, 84, 0.5);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs__control.is-active {
+  color: #102654;
+  -webkit-box-shadow: 0 -2px 0 0 #d10a42 inset;
+  box-shadow: 0 -2px 0 0 #d10a42 inset;
+  pointer-events: none;
+}
+
+.tabs__content {
+  -webkit-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.tabs__element {
+  width: 100%;
+}
+
+.tabs--unset .tabs__content {
+  height: 100px;
+}
+
+.tabs--unset .tabs__element {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1643,7 +1776,18 @@ button,
 
 @media (max-width: 1199px) {
   .subscription-card {
-    padding: 68px 118px;
+    padding: 63px 76px 67px;
+    max-width: 442px;
+    gap: 47px;
+  }
+
+  .subscription-card__price {
+    padding: 35px 13px 0;
+  }
+
+  .subscription-card__link {
+    max-width: 208px;
+    padding: 26px 0;
   }
 
   .trainer-card__back ul {
@@ -1768,7 +1912,7 @@ button,
     text-transform: lowercase;
   }
 
-  .hero__button {
+  .hero__link {
     max-width: 187px;
   }
 
@@ -1783,10 +1927,10 @@ button,
 
   .about {
     padding: 100px 0;
-    min-height: 854px;
   }
 
   .about__container {
+    margin-bottom: 83px;
     display: block;
   }
 
@@ -1843,6 +1987,38 @@ button,
     top: calc(50% - 36px);
     left: calc(50% - 36.5px);
   }
+
+  .subscriptions {
+    padding: 102px 0 100px;
+  }
+
+  .subscriptions h2 {
+    margin-right: 14px;
+    margin-bottom: 7px;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+  }
+
+  .subscriptions__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .tabs__controls {
+    margin-bottom: 44px;
+    max-width: 332px;
+    gap: 54px;
+  }
+
+  .tabs__control {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1852,23 +2028,28 @@ button,
   }
 
   .subscription-card {
-    padding: 55px 42px;
-    gap: 50px;
+    padding: 51px 36px 49px;
+    gap: 38px;
   }
 
   .subscription-card__header h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 22px;
     line-height: 110.16%;
   }
 
   .subscription-card__price {
-    padding: 31px 17px 0;
+    padding: 28px 5px 0;
   }
 
   .subscription-card__price p {
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 7px;
     font-size: 48px;
+  }
+
+  .subscription-card__price span {
+    font-size: 51px;
   }
 
   .trainer-card__back ul {
@@ -2042,7 +2223,7 @@ button,
     overflow: hidden;
   }
 
-  .hero__button {
+  .hero__link {
     margin-bottom: 0;
     padding: 24px;
     max-width: 100%;
@@ -2054,7 +2235,10 @@ button,
 
   .about {
     padding: 64px 0;
-    min-height: 925px;
+  }
+
+  .about__container {
+    margin-bottom: 6px;
   }
 
   .about__content {
@@ -2105,6 +2289,27 @@ button,
     -o-object-position: top;
     object-position: top;
   }
+
+  .subscriptions {
+    padding: 64px 0 74px;
+  }
+
+  .subscriptions h2 {
+    margin-bottom: 8px;
+    margin-right: 10px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .tabs__controls {
+    margin-bottom: 35px;
+    max-width: 100%;
+    gap: 46px;
+  }
+
+  .tabs__control {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -2144,13 +2349,13 @@ button,
     position: absolute;
     content: "";
     width: 95%;
-    height: 95%;
-    top: 2.5%;
+    height: 97%;
+    top: 1.5%;
     left: 2.5%;
     background-color: #ffffff;
   }
 
-  .subscription-card:hover:not(.focus-visible) .subscription-card__button {
+  .subscription-card:hover:not(.focus-visible) .subscription-card__link {
     -webkit-box-shadow: none;
     box-shadow: none;
     background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
