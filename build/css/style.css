@@ -1398,17 +1398,15 @@ button,
 
 .hero__info {
   max-width: 376px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 115px auto;
+  grid-template-columns: 115px auto;
+  gap: 50px 15px;
 }
 
-.hero__features {
-  position: relative;
-}
-
-.hero__features ul {
+.hero__features-list ul {
   padding: 0;
   margin: 0;
   margin-top: 213px;
@@ -1418,11 +1416,15 @@ button,
   list-style: none;
 }
 
-.hero__features li {
+.hero__features-list li {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-align: right;
+}
+
+.hero__description {
+  position: relative;
 }
 
 .hero__description p {
@@ -1441,7 +1443,6 @@ button,
 
 .hero__description h1 {
   margin: 0;
-  margin-bottom: 50px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 92px;
@@ -1452,27 +1453,28 @@ button,
 }
 
 .hero__button {
+  padding: 23px;
   margin-left: auto;
   margin-bottom: 43px;
-  display: block;
   width: 100%;
-  max-width: 230px;
-  padding: 23px;
+  max-width: 236px;
+  display: block;
+  grid-column: 1/-1;
 }
 
 .hero__image {
-  position: relative;
   max-width: 500px;
   width: 100%;
+  position: relative;
 }
 
 .hero__image img {
-  position: absolute;
-  top: -92px;
-  left: 0;
   width: 100%;
   height: auto;
   max-height: 556px;
+  position: absolute;
+  top: -92px;
+  left: 0;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1746,23 +1748,20 @@ button,
     letter-spacing: 0.02em;
   }
 
-  .hero {
-    padding-top: 92px;
-  }
-
   .hero__content {
     padding: 47px 0 62px;
-    gap: 28px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    gap: 28px;
   }
 
   .hero__info {
     max-width: 326px;
+    gap: 36px 15px;
   }
 
-  .hero__features ul {
+  .hero__features-list ul {
     margin-top: 129px;
   }
 
@@ -1775,7 +1774,6 @@ button,
   }
 
   .hero__description h1 {
-    margin-bottom: 36px;
     font-size: 71px;
     line-height: 87px;
     letter-spacing: 0.05em;
@@ -2038,23 +2036,18 @@ button,
 
   .hero__content {
     padding: 60px 0 78px;
+    gap: 0;
   }
 
   .hero__info {
     max-width: 100%;
-    display: block;
-    min-width: 293px;
+    -ms-grid-columns: minmax(115px, 50%) auto;
+    grid-template-columns: minmax(115px, 50%) auto;
+    gap: 55px 15px;
   }
 
-  .hero__features {
-    max-width: 50%;
-    min-width: 115px;
-  }
-
-  .hero__features ul {
-    margin: 0;
-    position: absolute;
-    top: 118px;
+  .hero__features-list ul {
+    margin-top: 118px;
     overflow: hidden;
   }
 
@@ -2067,19 +2060,21 @@ button,
 
   .hero__description h1 {
     margin-bottom: 24px;
-    font-size: 74px;
-    line-height: 86px;
-    letter-spacing: 0.03em;
+    margin-left: auto;
     max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
-    margin-left: auto;
+    font-size: 70px;
+    line-height: 86px;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
   }
 
   .hero__button {
     margin-bottom: 0;
-    max-width: 100%;
     padding: 24px;
+    max-width: 100%;
   }
 
   .hero__image {
