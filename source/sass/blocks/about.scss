@@ -16,7 +16,9 @@
 .about__container {
   display: grid;
   grid-template-columns: 475px auto;
-  column-gap: 25px;
+  gap: 25px;
+
+  position: relative;
 
   @include vp-1199 {
     display: block;
@@ -68,6 +70,7 @@
 
 .about__content span {
   margin-bottom: 40px;
+
   display: block;
 
   font-weight: 400;
@@ -127,6 +130,7 @@
 
   @include vp-1199 {
     max-height: 100%;
+
     display: block;
   }
 
@@ -152,6 +156,7 @@
   @include vp-767 {
     margin: 0 auto;
     margin-left: -$secondary-indent;
+
     height: 313px;
     width: 100vw;
     max-width: 100vw;
@@ -161,30 +166,11 @@
 }
 
 .about__video {
-  max-height: 228px;
+  margin-left: 35px;
 
-  grid-column: 1/-1;
-
-  display: flex;
-  justify-content: center;
-
-  transform: translateY(-113px);
-
-  @include vp-1199 {
-    max-height: 167px;
-
-    transform: translateY(-84px);
-  }
-
-  @include vp-767 {
-    transform: none;
-  }
-}
-
-.about__video-thumb {
-  margin-left: 78px;
-
-  position: relative;
+  position: absolute;
+  top: 289px;
+  left: calc(50% - 354px / 2);
 
   background-color: $color-base-8;
 
@@ -199,30 +185,46 @@
   }
 
   @include vp-1199 {
-    margin-left: 0;
+    margin-left: 44px;
+
+    top: 488px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    margin-left: -$secondary-indent;
+
+    width: 100vw;
+
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 
-.about__video-thumb img {
-  max-height: 100%;
+.about__video img {
+  height: auto;
+  max-height: 227px;
 
   object-fit: cover;
   object-position: bottom;
 
   @include vp-1199 {
     width: 266px;
+    max-height: 167px;
   }
 
   @include vp-767 {
     width: 100%;
-    min-width: 100vw;
+
+    object-position: top;
   }
 }
 
 .about__play-button {
   position: absolute;
-  top: 64px;
-  left: 132px;
+  top: calc(50% - 100px / 2);
+  left: calc(50% - 100px / 2);
 
   z-index: 10;
 
@@ -230,24 +232,7 @@
     width: 73px;
     height: 73px;
 
-    top: 47px;
-    left: 96px;
-
-    &::after {
-      width: 52px;
-      height: 52px;
-
-      top: 10px;
-      left: 10px;
-    }
-
-    & .play-button__triangle {
-      margin-right: -3px;
-      border-width: 5px 0 5px 10px;
-    }
-  }
-
-  @include vp-767 {
-    left: calc(50vw - 73px / 2);
+    top: calc(50% - 72px / 2);
+    left: calc(50% - 73px / 2);
   }
 }

@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-base-8, 0.8);
+  background-color: $color-base-8-op50;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -80,7 +80,7 @@
     height: 40px;
     padding: 0;
 
-    background: $color-base-8-op50;
+    background-color: $color-base-1;
     border: none;
     cursor: pointer;
   }
