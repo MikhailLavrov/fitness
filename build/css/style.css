@@ -1733,6 +1733,161 @@ button,
   overflow-x: hidden;
 }
 
+.promo {
+  padding: 120px 0 100px;
+}
+
+.promo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.promo__info-wrapper {
+  background-color: #ed0233;
+}
+
+.promo__info {
+  padding: 85px 78px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(117px, auto) minmax(56px, auto);
+  grid-template-columns: minmax(117px, auto) minmax(56px, auto);
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.promo__info h3 {
+  margin: 0;
+  padding: 0 11px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 82px;
+  line-height: 96%;
+  /* or 79px */
+}
+
+.promo__info p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: 1/-1;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+}
+
+.promo__info a {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: 1/-1;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.promo__info-list {
+  margin: 0;
+  margin-top: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.promo__info-list dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+}
+
+.promo__info-list dt::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -6px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.promo__info-list dd {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.promo__info-date span {
+  margin-left: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.promo__link {
+  padding: 17px;
+}
+
+.promo__image img {
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -2018,6 +2173,54 @@ button,
 
   .tabs__control {
     font-size: 18px;
+  }
+
+  .promo {
+    padding: 100px 0;
+  }
+
+  .promo__info {
+    padding: 50px 45px;
+    -webkit-column-gap: 29px;
+    -moz-column-gap: 29px;
+    column-gap: 29px;
+  }
+
+  .promo__info h3 {
+    padding: 0 5px;
+    font-size: 48px;
+  }
+
+  .promo__info p {
+    margin-top: 0;
+    margin-bottom: 29px;
+    font-size: 12px;
+  }
+
+  .promo__info a {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .promo__info-list {
+    gap: 0;
+  }
+
+  .promo__info-list dt {
+    font-size: 12px;
+  }
+
+  .promo__info-list dt::before {
+    bottom: -3px;
+  }
+
+  .promo__info-list dd {
+    font-size: 24px;
+  }
+
+  .promo__info-date span {
+    margin-left: 3px;
+    font-size: 10px;
   }
 }
 
@@ -2309,6 +2512,26 @@ button,
 
   .tabs__control {
     font-size: 16px;
+  }
+
+  .promo {
+    padding: 70px 0;
+  }
+
+  .promo__container {
+    display: block;
+  }
+
+  .promo__info {
+    margin: 0 auto;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+
+  .promo__image img {
+    min-height: 292px;
+    width: 100%;
   }
 }
 
