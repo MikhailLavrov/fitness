@@ -1,0 +1,68 @@
+.trainers {
+  padding: 50px 0 91px;
+
+  @include vp-767 {
+    padding: 34px 0 91px;
+  }
+}
+
+.trainers h2 {
+  margin: 0;
+  margin-bottom: 48px;
+
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 31px;
+
+    font-size: 42px;
+    line-height: 50px;
+    /* identical to box height */
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 42px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.trainers__container {
+  padding: 0 60px;
+  min-width: 0;
+  max-width: 1280px;
+  position: relative;
+}
+
+.trainers__swiper-wrapper {
+  position: relative;
+}
+
+.trainers__swiper-wrapper .swiper-button-prev {
+  // background-color: $color-2;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.trainers__swiper-wrapper .swiper-button-next {
+  // background-color: $color-2;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  z-index: 30;
+  cursor: pointer;
+}

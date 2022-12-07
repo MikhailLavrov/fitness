@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>Fitness</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Современный фитнесс-центр в Омске">
+    <title>Supergym Fitness</title>
   </head>
   <body>
     <div class="wrapper">
@@ -219,13 +220,11 @@
           </div>
         </section>
 
-
         <section class="promo">
           <div class="promo__container container">
-
             <div class="promo__info-wrapper">
               <div class="promo__info">
-                <h3>Super <br>games</h3>
+                <h2>Super <br>games</h2>
                 <dl class="promo__info-list">
                   <div class="promo__info-date">
                     <dt>Дата</dt>
@@ -240,17 +239,117 @@
                 <a class="promo__link light-button" href="#">Заполнить заявку</a>
               </div>
             </div>
-
             <div class="promo__image">
               <picture>
                 <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
                 <img width="660" height="500" src="./img/promo.jpg" alt="Атлет на обложке промо блока." srcset="./img/promo@2x.jpg 2x">
               </picture>
             </div>
-
           </div>
         </section>
 
+        <section class="trainers">
+          <div class="trainers__container container">
+            <h2>Тренеры</h2>
+            <!-- Slider main container -->
+            <div class="trainers__swiper-wrapper">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="trainer-card">
+                      <div class="trainer-card__front">
+                        <picture>
+                          <source type="image/webp" srcset="./img/trainers/anna.webp 1x, ./img/trainers/anna@2x.webp 2x">
+                          <img width="260" height="294" src="./img/trainers/anna.jpg" alt="Тренер Анна." srcset="./img/trainers/anna@2x.jpg 2x">
+                        </picture>
+                        <h3>Анна Павлова</h3>
+                      </div>
+                      <div class="trainer-card__back">
+                        <p>Анна Павлова</p>
+                        <span>CrossFit</span>
+                        <ul>
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit</li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="trainer-card">
+                      <div class="trainer-card__front">
+                        <picture>
+                          <source type="image/webp" srcset="./img/trainers/alexey.webp 1x, ./img/trainers/alexey@2x.webp 2x">
+                          <img width="260" height="294" src="./img/trainers/alexey.jpg" alt="Тренер Алексей." srcset="./img/trainers/alexey@2x.jpg 2x">
+                        </picture>
+                        <h3>Алексей Лавров</h3>
+                      </div>
+                      <div class="trainer-card__back">
+                        <p>Алексей Лавров</p>
+                        <span>CrossFit</span>
+                        <ul>
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit</li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="trainer-card">
+                      <div class="trainer-card__front">
+                        <picture>
+                          <source type="image/webp" srcset="./img/trainers/alexander.webp 1x, ./img/trainers/alexander@2x.webp 2x">
+                          <img width="260" height="294" src="./img/trainers/alexander.jpg" alt="Тренер Александр." srcset="./img/trainers/alexander@2x.jpg 2x">
+                        </picture>
+                        <h3>Александр Пашков</h3>
+                      </div>
+                      <div class="trainer-card__back">
+                        <p>Александр Пашков</p>
+                        <span>CrossFit</span>
+                        <ul>
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit</li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="trainer-card">
+                      <div class="trainer-card__front">
+                        <picture>
+                          <source type="image/webp" srcset="./img/trainers/maria.webp 1x, ./img/trainers/maria@2x.webp 2x">
+                          <img width="260" height="294" src="./img/trainers/maria.jpg" alt="Тренер Мария." srcset="./img/trainers/maria@2x.jpg 2x">
+                        </picture>
+                        <h3>Мария Кетова</h3>
+                      </div>
+                      <div class="trainer-card__back">
+                        <p>Мария Кетова</p>
+                        <span>CrossFit</span>
+                        <ul>
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit</li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  ...
+                </div>
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+          </div>
+        </section>
 
       </main>
       <footer>
@@ -265,7 +364,7 @@
         <div class="modal__content">
 
           <div class='embed-container'>
-            <iframe src='https://www.youtube.com/embed//9TZXsZItgdw' frameborder='0' allowfullscreen></iframe>
+            <iframe src='https://www.youtube.com/embed//9TZXsZItgdw' allowfullscreen></iframe>
           </div>
 
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
@@ -292,7 +391,7 @@
       </div>
     </div>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

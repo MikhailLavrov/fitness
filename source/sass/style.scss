@@ -1,8 +1,8 @@
 // Vendor
 // ---------------------------------
+// import Swiper and modules styles\
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
 
 @import "variables";
 @import "mixins";
@@ -40,6 +40,8 @@
 @import "blocks/subscriptions";
 @import "blocks/tabs";
 @import "blocks/promo";
+@import "blocks/trainers";
+@import "blocks/swiper";
 
 // ---------------------------------
 // ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
