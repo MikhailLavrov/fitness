@@ -1,0 +1,224 @@
+.features {
+  padding: 146px 0 81px;
+
+  background-color: $color-base-2;
+
+  @include vp-1199 {
+    padding: 92px 0;
+  }
+
+  @include vp-767 {
+    padding: 64px 0;
+  }
+}
+
+.features__container {
+  @include vp-1199 {
+    padding: 0 50px 0 40px;
+  }
+}
+
+.features__container h2 {
+  margin: 0;
+  margin-bottom: 49px;
+  margin-left: 10px;
+
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @include vp-1199 {
+    margin-bottom: 42px;
+    margin-right: 22px;
+
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    margin-right: 17px;
+    margin-bottom: 43px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.features__content {
+  margin: 0 auto;
+
+  max-width: 1040px;
+
+  @include vp-1199 {
+    max-width: 668px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 340px 240px 340px;
+  grid-template-rows: repeat(2, auto);
+
+  column-gap: 60px;
+
+  list-style: none;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, auto);
+    gap: 42px 40px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+  }
+}
+
+// items
+.features__item {
+  min-height: 161px;
+
+  display: flex;
+
+  @include vp-1199 {
+    min-height: auto;
+  }
+}
+
+.features__item--main {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+
+  @include vp-1199 {
+    margin: 0 auto;
+
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  @include vp-767 {
+    width: 100vw;
+    margin-left: -$secondary-indent;
+  }
+}
+
+.features__item--comfort,
+.features__item--experience {
+  align-items: flex-end;
+
+  border-top: 2px solid rgba($color-2, 0.2);
+
+  @include vp-1199 {
+    align-items: flex-start;
+
+    border-top: none;
+  }
+
+  @include vp-767 {
+    align-self: auto;
+    order: 1;
+  }
+}
+
+.features__item--comfort .features__card,
+.features__item--space .features__card {
+  padding-left: 20px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}
+
+// cards
+.features__card--main {
+  margin-top: 6px;
+  padding: 54px 30px;
+
+  max-height: 95%;
+  height: 100%;
+
+  color: $color-base-1;
+  text-align: center;
+
+  background-color: $color-base-6;
+
+  @include vp-1199 {
+    margin-top: 0;
+    margin-left: 10px;
+    padding: 33px 64px 38px;
+
+    max-height: 100%;
+    width: 442px;
+  }
+
+  @include vp-767 {
+    margin: 9px 0 8px;
+    padding: 38px 64px 43px;
+
+    width: 100%;
+  }
+}
+
+.features__card--main span {
+  margin-bottom: 39px;
+
+  display: block;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+
+  &:first-child {
+    margin-bottom: 8px;
+
+    display: block;
+
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 1;
+
+    @include vp-1199 {
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 19px;
+
+    font-size: 22px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+.features__card--main p {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  & br {
+    display: none;
+
+    @include vp-1199 {
+      display: block;
+    }
+  }
+}
