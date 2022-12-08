@@ -1053,7 +1053,7 @@ button,
 }
 
 .review-card {
-  padding: 62px;
+  padding: 54px 62px 56px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1066,18 +1066,27 @@ button,
   -webkit-column-gap: 28px;
   -moz-column-gap: 28px;
   column-gap: 28px;
-  row-gap: 15px;
+  row-gap: 13px;
   color: #ffffff;
   background-color: #1c3374;
 }
 
 .review-card__image {
+  margin-top: 8px;
   width: 100%;
   height: auto;
   max-height: 80px;
   border-radius: 50%;
   overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
   grid-row: 1/-1;
+}
+
+.review-card__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
 }
 
 .review-card h3 {
@@ -1954,13 +1963,24 @@ button,
   cursor: pointer;
 }
 
-.swiper-slide {
+.swiper2 {
+  max-width: 49%;
+}
+
+.swiper-wrapper {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.swiper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  height: auto;
 }
 
 .swiper ~ .swiper-button-prev,
@@ -1976,12 +1996,24 @@ button,
   font-size: 30px;
 }
 
-.swiper ~ .swiper-button-prev {
+.swiper1 ~ .swiper-button-prev {
   left: -56px;
 }
 
-.swiper ~ .swiper-button-next {
+.swiper1 ~ .swiper-button-next {
   right: -56px;
+}
+
+.swiper2 ~ .swiper-button-next {
+  right: 245px;
+}
+
+.swiper2 ~ .swiper-button-prev {
+  left: 245px;
+}
+
+.swiper ~ .swiper-button-disabled {
+  opacity: 0;
 }
 
 .features {
@@ -2208,6 +2240,27 @@ button,
   gap: 40px;
 }
 
+.reviews {
+  padding: 66px 0 120px;
+}
+
+.reviews__container h2 {
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 37px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.reviews__swiper-wrapper {
+  position: relative;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -2296,7 +2349,7 @@ button,
   }
 
   .review-card {
-    padding: 62px 65px;
+    padding: 54px 65px 55px;
   }
 
   .free-training {
@@ -2566,16 +2619,28 @@ button,
     text-align: center;
   }
 
-  .swiper {
+  .swiper1 {
     max-width: 87%;
   }
 
-  .swiper ~ .swiper-button-prev {
+  .swiper2 {
+    max-width: 84%;
+  }
+
+  .swiper1 ~ .swiper-button-prev {
     left: -16px;
   }
 
-  .swiper ~ .swiper-button-next {
+  .swiper1 ~ .swiper-button-next {
     right: -16px;
+  }
+
+  .swiper2 ~ .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper2 ~ .swiper-button-prev {
+    left: 0;
   }
 
   .features {
@@ -2681,6 +2746,18 @@ button,
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  .reviews {
+    padding: 42px 0 100px;
+  }
+
+  .reviews__container h2 {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    font-size: 42px;
+    line-height: 50px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2754,24 +2831,27 @@ button,
   }
 
   .review-card {
-    padding: 40px 25px;
+    padding: 40px 25px 33px;
     max-width: 226px;
     -ms-grid-columns: 68px auto;
     grid-template-columns: 68px auto;
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
-    row-gap: 20px;
+    row-gap: 15px;
   }
 
   .review-card__image {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+    margin-top: 0;
     max-height: 68px;
+    margin-left: 16px;
   }
 
   .review-card h3 {
+    margin-left: 21px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -3013,6 +3093,10 @@ button,
     line-height: 38px;
   }
 
+  .swiper2 {
+    max-width: 100%;
+  }
+
   .swiper ~ .swiper-button-prev,
   .swiper ~ .swiper-button-next {
     width: 10px;
@@ -3025,11 +3109,11 @@ button,
     font-size: 20px;
   }
 
-  .swiper ~ .swiper-button-prev {
+  .swiper1 ~ .swiper-button-prev {
     left: 0;
   }
 
-  .swiper ~ .swiper-button-next {
+  .swiper1 ~ .swiper-button-next {
     right: 0;
   }
 
@@ -3136,6 +3220,17 @@ button,
 
   .action__usual .stock-card:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  .reviews {
+    padding: 29px 0 70px;
+  }
+
+  .reviews__container h2 {
+    margin-right: 3px;
+    margin-bottom: 42px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 

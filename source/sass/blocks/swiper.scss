@@ -1,12 +1,29 @@
-.swiper {
+.swiper1 {
   @include vp-1199 {
     max-width: 87%;
   }
 }
 
-.swiper-slide {
+.swiper2 {
+  max-width: 49%;
+
+  @include vp-1199 {
+    max-width: 84%;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper .swiper-slide {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 
 .swiper ~ .swiper-button-prev,
@@ -31,7 +48,7 @@
   }
 }
 
-.swiper ~ .swiper-button-prev {
+.swiper1 ~ .swiper-button-prev {
   left: -56px;
 
   @include vp-1199 {
@@ -43,7 +60,7 @@
   }
 }
 
-.swiper ~ .swiper-button-next {
+.swiper1 ~ .swiper-button-next {
   right: -56px;
 
   @include vp-1199 {
@@ -53,4 +70,24 @@
   @include vp-767 {
     right: 0;
   }
+}
+
+.swiper2 ~ .swiper-button-next {
+  right: 245px;
+
+  @include vp-1199 {
+    right: 0;
+  }
+}
+
+.swiper2 ~ .swiper-button-prev {
+  left: 245px;
+
+  @include vp-1199 {
+    left: 0;
+  }
+}
+
+.swiper ~ .swiper-button-disabled {
+  opacity: 0;
 }

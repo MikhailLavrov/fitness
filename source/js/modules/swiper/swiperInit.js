@@ -4,7 +4,7 @@ import Swiper, {Navigation} from 'swiper';
 // init Swiper:
 const swiperInit = () => {
   // eslint-disable-next-line no-new
-  new Swiper('.swiper', {
+  new Swiper('.swiper1', {
     // configure Swiper to use modules
     modules: [Navigation],
     loop: true,
@@ -32,24 +32,16 @@ const swiperInit = () => {
       },
     },
 
-    autoplay: {
-      delay: 5500,
-      disableOnInteraction: false,
-    },
+    autoplay: 1000,
 
     keyboard: {
       enabled: true,
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper1-button-next',
+      prevEl: '.swiper1-button-prev',
     },
-
-    // navigation: {
-    //   nextEl: '.swiper-next',
-    //   prevEl: '.swiper-prev',
-    // },
   });
 };
 
