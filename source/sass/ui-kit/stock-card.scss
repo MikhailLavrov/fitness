@@ -6,13 +6,17 @@
 }
 
 .stock-card__content {
-  padding: 35px;
+  padding: 25px 28px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   color: $color-base-6;
   background-color: $color-base-1;
 
   @include vp-767 {
-    padding: 46px 50px;
+    padding: 36px 40px;
 
     text-align: center;
   }
@@ -20,14 +24,14 @@
 
 .stock-card__content p {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 
   font-weight: 700;
   font-size: 26px;
 }
 
 .stock-card__content span {
-  margin-bottom: 80px;
+  margin-bottom: 71px;
   display: block;
 
   font-weight: 400;
@@ -43,15 +47,18 @@
   }
 
   @include vp-1199 {
-    margin-bottom: 57px;
+    margin-bottom: 48px;
   }
 
   @include vp-767 {
-    margin-bottom: 35px;
+    margin-bottom: 26px;
   }
 }
 
 .stock-card__content a {
+  margin-top: auto;
+  margin-bottom: 4px;
+
   display: block;
   width: fit-content;
 
@@ -69,5 +76,6 @@
 
   @include vp-767 {
     margin: 0 auto;
+    margin-bottom: 4px;
   }
 }

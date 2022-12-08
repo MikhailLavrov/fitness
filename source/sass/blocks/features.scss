@@ -107,8 +107,8 @@
   }
 
   @include vp-767 {
-    width: 100vw;
-    margin-left: -$secondary-indent;
+    // width: 100vw;
+    // margin-left: -$secondary-indent;
   }
 }
 
@@ -163,7 +163,7 @@
 
   @include vp-767 {
     margin: 9px 0 8px;
-    padding: 38px 64px 43px;
+    padding: 38px 59px 43px;
 
     width: 100%;
   }
