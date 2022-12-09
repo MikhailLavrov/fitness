@@ -14,7 +14,7 @@
       <header class="header">
         <div class="header__container container">
           <a>
-            <img class="header__logo" src="./img/svg/logo.svg" width="118" height="23" alt="Логотип компании.">
+            <img class="header__logo" src="./img/svg/logo-thin.svg" width="118" height="23" alt="Логотип компании.">
           </a>
           <div class="header__phone">
             <a href="tel:88005555555">8-800-555-55-55</a>
@@ -488,9 +488,119 @@
           </div>
         </section>
 
+        <section class="feedback">
+          <div class="feedback__container container">
+            <div class="free-training">
+              <div class="free-training__form">
+                <form method="post" action="https://echo.htmlacademy.ru/" id="free-training-form">
+                  <fieldset>
+                    <legend>Бесплатное занятие </legend>
+                    <div class="free-training__entry-fields">
+                      <div class="free-training__input-wrapper">
+                        <label class="visually-hidden" for="name">Имя.</label>
+                        <input type="text" id="name" title="Допускается ввод только букв" placeholder="Имя" name="name" pattern="^(?!\s*$)[-/', а-яА-Я, a-zA-Z]+$" minlength="2" maxlength="50" required>
+                      </div>
+                      <div class="free-training__input-wrapper">
+                        <label class="visually-hidden" for="phone">Телефон.</label>
+                        <input type="tel" id="phone" placeholder="Телефон" name="phone" title="Допускается ввод только цифр, пробелов и символов +)(-" pattern="\+?[0-9\s\-\(\)]+" maxlength="30" required>
+                      </div>
+                    </div>
+                    <button class="free-training__button light-button" type="submit" form="free-training-form">Отправить</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="contacts">
+              <div class="contacts__wrapper">
+                <h2>Контакты</h2>
+                <div class="contacts__content">
+                  <div class="contacts__column">
+                    <div>
+                      <h3>Адрес:</h3>
+                      <p>г. Омск, ул. 60 лет Октября, 7</p>
+                    </div>
+                    <div>
+                      <h3>График работы:</h3>
+                      <p>Пн-Вс: с 8:00 до 22:00</p>
+                    </div>
+                  </div>
+                  <div class="contacts__column">
+                    <div>
+                      <h3>Телефон:</h3>
+                      <a href="tel:+78005555555">8-800-555-55-55</a>
+                    </div>
+                    <div>
+                      <h3>Email:</h3>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__logo">
+            <a>
+              <picture>
+                <source media="(max-width: 1199px)" type="image/webp" srcset="./img/svg/logo-thick.svg">
+                <img class="footer__logo" src="./img/svg/logo-thin.svg" width="88" height="15" alt="Логотип компании.">
+              </picture>
+            </a>
+          </div>
+          <div class="footer__nav">
+            <ul>
+              <li class="footer__nav-item footer__nav-item--logo">
+                <a>
+                  <img src="./img/svg/logo-thin.svg" width="68" height="15" alt="Логотип компании.">
+                </a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--services">
+                <a href="#">Услуги</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--subscriptions">
+                <a href="#">Абонементы</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--action">
+                <a href="#">Акции</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--trainers">
+                <a href="#">Тренеры</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--timetable">
+                <a href="#">Расписание</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials">
+            <ul>
+              <li>
+                <a href="#">
+                  <svg width="25" height="25">
+                    <use xlink:href="img/sprite.svg#socials-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="25" height="25">
+                    <use xlink:href="img/sprite.svg#socials-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="25" height="25">
+                    <use xlink:href="img/sprite.svg#socials-face"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
 

@@ -1,0 +1,140 @@
+.footer {
+  padding: 38px 0;
+
+  color: $color-base-1;
+
+  background-color: $color-base-7;
+
+  @include vp-1199 {
+    padding: 41px 0;
+  }
+
+  @include vp-767 {
+    padding: 46px 0;
+  }
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    padding: 0 39px;
+  }
+
+  @include vp-767 {
+    padding: 0 $secondary-indent;
+
+    display: block;
+  }
+}
+
+.footer__container ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.footer__container a {
+  color: $color-base-1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.footer__logo {
+  margin-right: 5px;
+  transform: translateY(2px);
+
+  @include vp-1199 {
+    margin-right: 15px;
+    width: 82px;
+    height: 18px;
+
+    transform: translate(3px, 0);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.footer__nav {
+  max-width: 45%;
+
+  @include vp-1199 {
+    max-width: 57%;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.footer__nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  @include vp-1199 {
+    gap: 31px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 30px;
+    margin-bottom: 33px;
+  }
+}
+
+.footer__nav-item {
+  &--logo {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &--services {
+    @include vp-767 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
+
+  &--action {
+    @include vp-767 {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+
+  &--trainers {
+    @include vp-767 {
+      grid-row: 2;
+      grid-column: 2;
+    }
+  }
+}
+
+.footer__socials ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  max-width: 150px;
+  align-items: center;
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}

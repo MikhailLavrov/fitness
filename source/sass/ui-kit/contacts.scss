@@ -1,95 +1,124 @@
 .contacts {
-  padding: 56px 120px 70px;
+  padding: 57px 0 64px;
 
   background-color: $color-base-1;
 
   @include vp-1199 {
-    padding: 70px 133px;
+    padding: 62px 45px 63px;
   }
 
   @include vp-767 {
-    padding: 70px 15px;
+    padding: 64px 15px 63px;
+  }
+}
+
+.contacts__wrapper {
+  @include vp-1199 {
+    margin: 0 auto;
+    max-width: 456px;
   }
 }
 
 .contacts h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 37px;
 
   font-family: $ff-alumni;
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
+  letter-spacing: 0.03em;
 
   @include vp-1199 {
+    margin-bottom: 33px;
+
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
+    margin-bottom: 35px;
+
     font-size: 32px;
     line-height: 38px;
   }
 }
 
 .contacts__content {
-  max-width: 404px;
+  margin-left: 4px;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 45px;
+  grid-template-columns: 170px 110px;
+  gap: 120px;
+
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 90%;
+    background-color: $color-base-4;
+    top: 5%;
+    left: 230px;
+
+    @include vp-1199 {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 90%;
+      background-color: $color-base-4;
+      top: 5%;
+      left: 58%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 
   @include vp-1199 {
-    max-width: 484px;
+    max-width: 100%;
+    margin-left: 0;
+    grid-template-columns: 218px 142px;
+    justify-content: space-between;
+    gap: 50px;
   }
 
   @include vp-767 {
     display: block;
-
-    gap: 0;
   }
 }
 
 .contacts__column {
-  &:nth-child(even) {
-    padding-left: 60px;
-
-    border-left: 1px solid $color-base-4;
-
-    @include vp-1199 {
-      padding-left: 48px;
-    }
-
+  &:not(:last-child) {
     @include vp-767 {
-      padding-left: 0;
-
-      border: none;
+      margin-bottom: 20px;
     }
-  }
-
-  @include vp-767 {
-    margin-bottom: 30px;
   }
 }
 
 .contacts__column div {
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 
     @include vp-1199 {
-      margin-bottom: 35px;
+      margin-bottom: 19px;
     }
   }
 }
 
 .contacts__column h3 {
   margin: 0;
+  margin-bottom: 3px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
 
   @include vp-1199 {
+    margin-bottom: 5px;
+
     font-size: 20px;
   }
 }
@@ -104,5 +133,23 @@
   @include vp-1199 {
     font-size: 18px;
     line-height: 152.34%;
+  }
+}
+
+.contacts__column a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  @include vp-1199 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 152.34%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
   }
 }
