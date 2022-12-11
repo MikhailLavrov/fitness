@@ -15,6 +15,7 @@
 .contacts__wrapper {
   @include vp-1199 {
     margin: 0 auto;
+
     max-width: 456px;
   }
 }
@@ -54,22 +55,24 @@
   position: relative;
 
   &::after {
-    position: absolute;
-    content: "";
     width: 1px;
     height: 90%;
-    background-color: $color-base-4;
+
+    position: absolute;
+    content: "";
     top: 5%;
     left: 230px;
+    background-color: $color-base-4;
 
     @include vp-1199 {
-      position: absolute;
-      content: "";
       width: 1px;
       height: 90%;
-      background-color: $color-base-4;
+
+      position: absolute;
+      content: "";
       top: 5%;
       left: 58%;
+      background-color: $color-base-4;
     }
 
     @include vp-767 {
@@ -137,19 +140,19 @@
 }
 
 .contacts__column a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   display: flex;
   align-items: center;
 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
   @include vp-1199 {
+    display: flex;
+    align-items: center;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 152.34%;
-    /* or 27px */
-
-    display: flex;
-    align-items: center;
   }
 }

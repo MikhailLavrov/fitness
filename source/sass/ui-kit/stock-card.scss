@@ -1,5 +1,6 @@
 .stock-card {
   padding: 7px;
+
   max-width: 560px;
 
   background: $linear-gradient-1;
@@ -9,10 +10,12 @@
   padding: 25px 28px;
 
   height: 100%;
+
   display: flex;
   flex-direction: column;
 
   color: $color-base-6;
+
   background-color: $color-base-1;
 
   @include vp-767 {
@@ -32,6 +35,7 @@
 
 .stock-card__content span {
   margin-bottom: 71px;
+
   display: block;
 
   font-weight: 400;
@@ -56,11 +60,11 @@
 }
 
 .stock-card__content a {
-  margin-top: auto;
-  margin-bottom: 4px;
+  margin: auto 0 4px;
+
+  width: fit-content;
 
   display: block;
-  width: fit-content;
 
   color: $color-base-6;
   text-transform: uppercase;
@@ -75,7 +79,6 @@
   border-bottom: 1px solid currentColor;
 
   @include vp-767 {
-    margin: 0 auto;
-    margin-bottom: 4px;
+    margin: 0 auto 4px;
   }
 }

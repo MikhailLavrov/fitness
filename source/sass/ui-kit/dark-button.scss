@@ -4,14 +4,15 @@
   color: $color-base-8;
   text-transform: uppercase;
 
-  box-shadow: 0 0 0 2px currentColor inset;
   border: none;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0 0 0 2px currentColor inset;
 
   @include hover-focus {
+    color: $color-base-1;
+
     box-shadow: none;
     background: $linear-gradient-1;
-    color: $color-base-1;
   }
 }

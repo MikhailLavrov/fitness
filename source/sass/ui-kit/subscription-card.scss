@@ -21,19 +21,21 @@
     background: $linear-gradient-4;
 
     &::after {
-      position: absolute;
-      content: "";
       width: 95%;
       height: 97%;
+
+      position: absolute;
+      content: "";
       top: 1.5%;
       left: 2.5%;
       background-color: $color-base-1;
     }
 
     & .subscription-card__link {
+      color: $color-base-1;
+
       box-shadow: none;
       background: $linear-gradient-1;
-      color: $color-base-1;
     }
   }
 
@@ -131,8 +133,9 @@
 
 .subscription-card__link {
   padding: 28px;
+
   width: 100%;
-  z-index: 5;
+
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -140,8 +143,11 @@
   text-transform: uppercase;
   text-align: center;
 
+  z-index: 5;
+
   @include vp-1199 {
-    max-width: 208px;
     padding: 26px 0;
+
+    max-width: 208px;
   }
 }

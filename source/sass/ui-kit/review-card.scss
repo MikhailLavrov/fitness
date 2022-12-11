@@ -1,12 +1,12 @@
 .review-card {
   padding: 54px 62px 56px;
+
   width: fit-content;
 
   display: grid;
   grid-template-columns: 80px minmax(auto, 328px);
   grid-template-rows: auto auto;
-  column-gap: 28px;
-  row-gap: 13px;
+  gap: 13px 28px;
 
   color: $color-base-1;
   background-color: $color-base-6;
@@ -17,11 +17,11 @@
 
   @include vp-767 {
     padding: 40px 25px 33px;
+
     max-width: 226px;
 
     grid-template-columns: 68px auto;
-    column-gap: 10px;
-    row-gap: 15px;
+    gap: 15px 10px;
   }
 }
 
@@ -39,17 +39,19 @@
   grid-row: 1/-1;
 
   @include vp-767 {
-    grid-row: 1/2;
+    margin-left: 16px;
     margin-top: 0;
 
     max-height: 68px;
-    margin-left: 16px;
+
+    grid-row: 1/2;
   }
 }
 
 .review-card__image img {
-  object-fit: cover;
   height: 100%;
+
+  object-fit: cover;
 }
 
 .review-card h3 {
@@ -61,7 +63,9 @@
 
   @include vp-767 {
     margin-left: 21px;
+
     align-self: center;
+
     line-height: 130%;
   }
 }
@@ -77,6 +81,7 @@
 
   @include vp-767 {
     grid-column: 1/-1;
+
     text-align: center;
   }
 }

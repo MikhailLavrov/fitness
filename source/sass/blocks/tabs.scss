@@ -5,7 +5,6 @@
 .tabs__controls {
   margin: 0 auto;
   margin-bottom: 38px;
-  box-shadow: 0 -2px 0 0 rgba($color-10, 0.2) inset;
 
   width: 100%;
   max-width: 341px;
@@ -15,15 +14,19 @@
   justify-content: center;
   gap: 46px;
 
+  box-shadow: 0 -2px 0 0 rgba($color-10, 0.2) inset;
+
   @include vp-1199 {
     margin-bottom: 44px;
 
     max-width: 332px;
+
     gap: 54px;
   }
 
   @include vp-767 {
     margin-bottom: 35px;
+
     max-width: 100%;
 
     gap: 46px;
@@ -74,6 +77,7 @@
 
 .tabs--unset .tabs__element {
   height: 100%;
+
   overflow-y: auto;
   overflow-x: hidden;
 }

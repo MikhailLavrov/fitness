@@ -10,6 +10,7 @@
 
   @include hover-focus {
     color: $color-base-8;
+
     background: none;
     background-color: transparent;
     box-shadow: 0 0 0 2px currentColor inset;

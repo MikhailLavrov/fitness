@@ -1,5 +1,6 @@
 .free-training {
   padding: 56px 0 64px;
+
   background-color: $color-base-8;
 
   @include vp-1199 {
@@ -15,8 +16,9 @@
   max-width: 410px;
 
   @include vp-1199 {
-    max-width: 472px;
     margin: 0 auto;
+
+    max-width: 472px;
   }
 }
 
@@ -35,6 +37,7 @@
 
   @include vp-1199 {
     margin-bottom: 34px;
+
     font-weight: 700;
     font-size: 42px;
     line-height: 50px;
@@ -67,6 +70,7 @@
 
   @include vp-767 {
     margin-bottom: 38px;
+
     display: block;
   }
 }
@@ -81,6 +85,7 @@
 
 .free-training__input-wrapper input {
   padding: 6px 0;
+
   width: 100%;
 
   color: $color-base-1;

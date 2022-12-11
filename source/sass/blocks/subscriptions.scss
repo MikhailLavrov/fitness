@@ -1,8 +1,9 @@
 .subscriptions {
-  background-color: $color-base-2;
   padding: 120px 0 123px;
 
   position: relative;
+
+  background-color: $color-base-2;
 
   @include vp-1199 {
     padding: 102px 0 100px;

@@ -1,0 +1,13 @@
+.ui-kit-page {
+  padding: 45px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  background-color: rgb(189, 189, 189);
+
+  @include vp-767 {
+    padding: 15px;
+  }
+}

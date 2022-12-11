@@ -18,7 +18,6 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  /* identical to box height */
   letter-spacing: 0.03em;
   text-align: center;
 
@@ -69,9 +68,10 @@
 .action__special-content {
   padding: 41px 45px;
 
+  height: auto;
+
   display: flex;
   flex-direction: column;
-  height: auto;
   align-items: flex-start;
 
   color: $color-base-1;
@@ -94,19 +94,17 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1;
-  /* or 44px */
 }
 
 .action__special-content strong {
   margin-bottom: 19px;
 
+  display: flex;
+  align-items: center;
+
   font-weight: 700;
   font-size: 70px;
   line-height: 1;
-  /* or 109px */
-
-  display: flex;
-  align-items: center;
 
   @include vp-767 {
     margin-bottom: 14px;
@@ -119,7 +117,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
-  /* or 25px */
 
   @include vp-767 {
     text-align: center;
@@ -140,10 +137,11 @@
   color: $color-base-1;
 
   &::after {
-    position: absolute;
-    content: "";
     width: 100%;
     height: 1px;
+
+    position: absolute;
+    content: "";
     left: 0;
     bottom: -2px;
     background-color: currentColor;

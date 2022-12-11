@@ -472,9 +472,9 @@ a {
 
 img,
 video {
-  display: block;
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 textarea {
@@ -687,6 +687,19 @@ button,
   opacity: 1;
 }
 
+.ui-kit-page {
+  padding: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 40px;
+  background-color: rgb(189, 189, 189);
+}
+
 .light-button {
   padding: 21px;
   font-weight: 700;
@@ -711,19 +724,19 @@ button,
   padding: 26px;
   color: #102654;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
   -webkit-box-shadow: 0 0 0 2px currentColor inset;
   box-shadow: 0 0 0 2px currentColor inset;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .dark-button.focus-visible:focus {
+  color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
-  color: #ffffff;
 }
 
 .gradient-button {
@@ -774,21 +787,21 @@ button,
 }
 
 .subscription-card.focus-visible:focus::after {
-  position: absolute;
-  content: "";
   width: 95%;
   height: 97%;
+  position: absolute;
+  content: "";
   top: 1.5%;
   left: 2.5%;
   background-color: #ffffff;
 }
 
 .subscription-card.focus-visible:focus .subscription-card__link {
+  color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
-  color: #ffffff;
 }
 
 .subscription-card__header {
@@ -839,13 +852,13 @@ button,
 .subscription-card__link {
   padding: 28px;
   width: 100%;
-  z-index: 5;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
+  z-index: 5;
 }
 
 .trainer-card {
@@ -1034,12 +1047,11 @@ button,
 }
 
 .stock-card__content a {
-  margin-top: auto;
-  margin-bottom: 4px;
-  display: block;
+  margin: auto 0 4px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: block;
   color: #1c3374;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1063,10 +1075,7 @@ button,
   grid-template-columns: 80px minmax(auto, 328px);
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
-  -webkit-column-gap: 28px;
-  -moz-column-gap: 28px;
-  column-gap: 28px;
-  row-gap: 13px;
+  gap: 13px 28px;
   color: #ffffff;
   background-color: #1c3374;
 }
@@ -1084,9 +1093,9 @@ button,
 }
 
 .review-card__image img {
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 100%;
 }
 
 .review-card h3 {
@@ -1224,13 +1233,13 @@ button,
 }
 
 .contacts__content::after {
-  position: absolute;
-  content: "";
   width: 1px;
   height: 90%;
-  background-color: #74819c;
+  position: absolute;
+  content: "";
   top: 5%;
   left: 230px;
+  background-color: #74819c;
 }
 
 .contacts__column div:not(:last-child) {
@@ -1253,15 +1262,15 @@ button,
 }
 
 .contacts__column a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .play-button {
@@ -1287,10 +1296,10 @@ button,
 }
 
 .play-button::after {
-  position: absolute;
-  content: "";
   width: 72%;
   height: 72%;
+  position: absolute;
+  content: "";
   top: 14%;
   left: 14%;
   background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
@@ -1308,33 +1317,6 @@ button,
   width: 15%;
   height: 15%;
   z-index: 10;
-}
-
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #0039db;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.btn--red {
-  background-color: #2e2e2e;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .modal {
@@ -1453,9 +1435,6 @@ button,
   padding: 33px 0 32px;
   min-height: 92px;
   z-index: 10;
-  -webkit-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 
 .header__container {
@@ -1533,9 +1512,7 @@ button,
 }
 
 .hero__description p {
-  margin: 0;
-  margin-top: 21px;
-  margin-bottom: 12px;
+  margin: 21px 0 12px;
   padding: 0 53px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -1663,12 +1640,12 @@ button,
 }
 
 .about__video::after {
+  width: 100%;
+  height: 100%;
   position: absolute;
   content: "";
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(16, 38, 84, 0.5);
 }
 
@@ -1689,27 +1666,27 @@ button,
 }
 
 .embed-container {
-  position: relative;
   padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
   max-width: 100%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .subscriptions {
-  background-color: #f8f9fc;
   padding: 120px 0 123px;
   position: relative;
+  background-color: #f8f9fc;
 }
 
 .subscriptions h2 {
@@ -1737,8 +1714,6 @@ button,
 .tabs__controls {
   margin: 0 auto;
   margin-bottom: 38px;
-  -webkit-box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
-  box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
   width: 100%;
   max-width: 341px;
   display: -webkit-box;
@@ -1750,6 +1725,8 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   gap: 46px;
+  -webkit-box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
+  box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset;
 }
 
 .tabs__control {
@@ -1830,13 +1807,10 @@ button,
   text-transform: uppercase;
   font-size: 82px;
   line-height: 96%;
-  /* or 79px */
 }
 
 .promo__info p {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 46px;
+  margin: 10px 0 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1847,7 +1821,6 @@ button,
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  /* or 27px */
 }
 
 .promo__info a {
@@ -1900,14 +1873,13 @@ button,
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  /* or 27px */
 }
 
 .promo__info-list dt::before {
-  position: absolute;
-  content: "";
   width: 100%;
   height: 1px;
+  position: absolute;
+  content: "";
   bottom: -6px;
   left: 0;
   background-color: #ffffff;
@@ -1954,7 +1926,6 @@ button,
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  /* identical to box height */
   letter-spacing: 0.03em;
 }
 
@@ -2000,21 +1971,21 @@ button,
 }
 
 .swiper .swiper-slide {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: auto;
 }
 
 .swiper ~ .swiper-button-prev,
 .swiper ~ .swiper-button-next {
-  top: 52%;
-  color: #afafaf;
   width: 16px;
   height: 32px;
+  top: 52%;
+  color: #afafaf;
 }
 
 .swiper ~ .swiper-button-prev::after,
@@ -2055,7 +2026,6 @@ button,
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  /* identical to box height */
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -2155,7 +2125,6 @@ button,
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  /* identical to box height */
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -2179,6 +2148,7 @@ button,
 
 .action__special-content {
   padding: 41px 45px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2186,7 +2156,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -2199,21 +2168,19 @@ button,
   font-weight: 700;
   font-size: 28px;
   line-height: 1;
-  /* or 44px */
 }
 
 .action__special-content strong {
   margin-bottom: 19px;
-  font-weight: 700;
-  font-size: 70px;
-  line-height: 1;
-  /* or 109px */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1;
 }
 
 .action__special-content p {
@@ -2221,7 +2188,6 @@ button,
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
-  /* or 25px */
 }
 
 .action__special-content a {
@@ -2237,10 +2203,10 @@ button,
 }
 
 .action__special-content a::after {
-  position: absolute;
-  content: "";
   width: 100%;
   height: 1px;
+  position: absolute;
+  content: "";
   left: 0;
   bottom: -2px;
   background-color: currentColor;
@@ -2278,7 +2244,6 @@ button,
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  /* identical to box height */
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -2328,10 +2293,10 @@ button,
 }
 
 .footer__container a {
-  color: #ffffff;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  color: #ffffff;
 }
 
 .footer__logo {
@@ -2362,58 +2327,17 @@ button,
 }
 
 .footer__socials ul {
+  max-width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 11px;
-  max-width: 150px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
-
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
 
 @media (max-width: 1199px) {
   .subscription-card {
@@ -2427,8 +2351,8 @@ button,
   }
 
   .subscription-card__link {
-    max-width: 208px;
     padding: 26px 0;
+    max-width: 208px;
   }
 
   .trainer-card {
@@ -2470,8 +2394,8 @@ button,
   }
 
   .free-training__form {
-    max-width: 472px;
     margin: 0 auto;
+    max-width: 472px;
   }
 
   .free-training__form legend {
@@ -2501,13 +2425,13 @@ button,
   }
 
   .contacts__content::after {
-    position: absolute;
-    content: "";
     width: 1px;
     height: 90%;
-    background-color: #74819c;
+    position: absolute;
+    content: "";
     top: 5%;
     left: 58%;
+    background-color: #74819c;
   }
 
   .contacts__content {
@@ -2536,16 +2460,15 @@ button,
   }
 
   .contacts__column a {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 152.34%;
-    /* or 27px */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 152.34%;
   }
 
   .header {
@@ -2585,7 +2508,7 @@ button,
 
   .hero__description p {
     padding: 0 8px;
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 10px;
     font-size: 30px;
     line-height: 29px;
@@ -2763,7 +2686,6 @@ button,
     margin-bottom: 31px;
     font-size: 42px;
     line-height: 50px;
-    /* identical to box height */
     text-align: center;
   }
 
@@ -2965,6 +2887,10 @@ button,
     max-width: 100%;
   }
 
+  .ui-kit-page {
+    padding: 15px;
+  }
+
   .subscription-card {
     padding: 51px 36px 49px;
     gap: 38px;
@@ -3025,8 +2951,7 @@ button,
   }
 
   .stock-card__content a {
-    margin: 0 auto;
-    margin-bottom: 4px;
+    margin: 0 auto 4px;
   }
 
   .review-card {
@@ -3034,19 +2959,16 @@ button,
     max-width: 226px;
     -ms-grid-columns: 68px auto;
     grid-template-columns: 68px auto;
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    row-gap: 15px;
+    gap: 15px 10px;
   }
 
   .review-card__image {
+    margin-left: 16px;
+    margin-top: 0;
+    max-height: 68px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    margin-top: 0;
-    max-height: 68px;
-    margin-left: 16px;
   }
 
   .review-card h3 {
@@ -3209,6 +3131,10 @@ button,
 
   .about__content-story {
     margin-bottom: 33px;
+  }
+
+  .about__content-story br {
+    display: block;
   }
 
   .about__image {
@@ -3471,12 +3397,12 @@ button,
   }
 
   .footer__nav ul {
+    margin-bottom: 33px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 30px;
-    margin-bottom: 33px;
   }
 
   .footer__nav-item--logo {
@@ -3509,12 +3435,6 @@ button,
   }
 }
 
-@media (max-width: 320px) {
-  .about__content-story br {
-    display: block;
-  }
-}
-
 @media (hover: hover) {
   .light-button:hover:not(.focus-visible) {
     -webkit-box-shadow: 0 0 0 4px #e8e8e8 inset;
@@ -3522,11 +3442,11 @@ button,
   }
 
   .dark-button:hover:not(.focus-visible) {
+    color: #ffffff;
     -webkit-box-shadow: none;
     box-shadow: none;
     background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
     background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
-    color: #ffffff;
   }
 
   .gradient-button:hover:not(.focus-visible) {
@@ -3543,21 +3463,21 @@ button,
   }
 
   .subscription-card:hover:not(.focus-visible)::after {
-    position: absolute;
-    content: "";
     width: 95%;
     height: 97%;
+    position: absolute;
+    content: "";
     top: 1.5%;
     left: 2.5%;
     background-color: #ffffff;
   }
 
   .subscription-card:hover:not(.focus-visible) .subscription-card__link {
+    color: #ffffff;
     -webkit-box-shadow: none;
     box-shadow: none;
     background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
     background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
-    color: #ffffff;
   }
 
   .trainer-card:hover:not(.focus-visible) .trainer-card__back {
@@ -3575,9 +3495,5 @@ button,
   .play-button:hover:not(.focus-visible)::after {
     background: -o-linear-gradient(307.49deg, #d10a42 0%, #0041ca 87.33%);
     background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
-  }
-
-  .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
   }
 }

@@ -34,6 +34,7 @@
 .trainer-card__front h3 {
   margin: 0;
   padding: 24px;
+
   width: 100%;
 
   position: absolute;
@@ -45,6 +46,7 @@
 
 .trainer-card__front img {
   width: 100%;
+
   object-fit: cover;
 
   @include vp-1199 {
@@ -59,6 +61,7 @@
 
 .trainer-card__back {
   padding: 52px 40px;
+
   height: 100%;
   width: 100%;
 

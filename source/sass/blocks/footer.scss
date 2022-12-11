@@ -38,10 +38,10 @@
 }
 
 .footer__container a {
-  color: $color-base-1;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  color: $color-base-1;
 
   @include vp-767 {
     font-size: 16px;
@@ -51,10 +51,12 @@
 
 .footer__logo {
   margin-right: 5px;
+
   transform: translateY(2px);
 
   @include vp-1199 {
     margin-right: 15px;
+
     width: 82px;
     height: 18px;
 
@@ -89,10 +91,11 @@
   }
 
   @include vp-767 {
+    margin-bottom: 33px;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 30px;
-    margin-bottom: 33px;
   }
 }
 
@@ -128,10 +131,11 @@
 }
 
 .footer__socials ul {
+  max-width: 150px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 11px;
-  max-width: 150px;
   align-items: center;
 
   @include vp-767 {

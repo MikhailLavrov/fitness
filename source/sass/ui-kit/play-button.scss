@@ -1,5 +1,6 @@
 .play-button {
   padding: 0;
+
   width: 100px;
   height: 100px;
 
@@ -18,11 +19,11 @@
   border-radius: 50%;
 
   &::after {
-    position: absolute;
-    content: "";
     width: 72%;
     height: 72%;
 
+    position: absolute;
+    content: "";
     top: 14%;
     left: 14%;
     background: $linear-gradient-1;
@@ -38,7 +39,9 @@
 
 .play-button svg {
   margin-left: 4px;
+
   width: 15%;
   height: 15%;
+
   z-index: 10;
 }

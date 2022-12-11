@@ -20,6 +20,7 @@
 .feedback__container .contacts {
   @include vp-1199 {
     margin-left: -$primary-indent;
+
     width: 100vw;
   }
 
