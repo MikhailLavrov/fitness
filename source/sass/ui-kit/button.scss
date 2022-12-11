@@ -1,0 +1,38 @@
+.button {
+  padding: 17px;
+
+  width: 100%;
+
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &--light {
+    color: $color-base-1;
+
+    box-shadow: 0 0 0 4px currentColor inset;
+
+    @include hover-focus {
+      box-shadow: 0 0 0 4px $color-base-3 inset;
+    }
+  }
+
+  &--dark {
+    color: $color-base-8;
+
+    box-shadow: 0 0 0 2px currentColor inset;
+
+    @include hover-focus {
+      color: $color-base-1;
+
+      box-shadow: none;
+      background: $linear-gradient-1;
+    }
+  }
+}

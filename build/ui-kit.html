@@ -13,8 +13,13 @@
     <div class="ui-kit-page">
 
       <div>
-        <div>Primary button</div>
-        <button class="light-button">Купить абонемент</button>
+        <div>Light button</div>
+        <button class="button button--light">Купить абонемент</button>
+      </div>
+
+      <div>
+        <div>Dark button</div>
+        <button class="button button--dark">Купить абонемент</button>
       </div>
 
       <div>
@@ -24,16 +29,6 @@
             <use xlink:href="img/sprite.svg#play-button-triangle"></use>
           </svg>
         </button>
-      </div>
-
-      <div>
-        <div>Secondary button</div>
-        <button class="dark-button">Купить абонемент</button>
-      </div>
-
-      <div>
-        <div>Gradient button</div>
-        <button class="gradient-button">Купить абонемент</button>
       </div>
 
       <div>
@@ -47,7 +42,7 @@
             <p>5000</p>
             <span>&#8381;</span>
           </div>
-          <a class="subscription-card__link dark-button" href="#">Купить абонемент</a>
+          <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
         </div>
       </div>
 
@@ -129,7 +124,7 @@
                     <input type="tel" id="phone" placeholder="Телефон" name="phone" title="Допускается ввод только цифр, пробелов и символов +)(-" pattern="\+?[0-9\s\-\(\)]+" maxlength="30" required>
                   </div>
                 </div>
-                <button class="free-training__button light-button" type="submit" form="free-training-form">Отправить</button>
+                <button class="free-training__button button button--light" type="submit" form="free-training-form">Отправить</button>
               </fieldset>
             </form>
           </div>
