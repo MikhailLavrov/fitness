@@ -7,6 +7,8 @@
 .swiper2 {
   max-width: 49%;
 
+  box-shadow: 0 0 40px rgba($color-base-6, 0.2);
+
   @include vp-1199 {
     max-width: 84%;
   }

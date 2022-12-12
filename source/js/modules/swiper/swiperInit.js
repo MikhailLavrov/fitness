@@ -32,12 +32,6 @@ const swiperInit = () => {
       },
     },
 
-    autoplay: 1000,
-
-    keyboard: {
-      enabled: true,
-    },
-
     navigation: {
       nextEl: '.swiper1-button-next',
       prevEl: '.swiper1-button-prev',

@@ -146,6 +146,10 @@
     bottom: -2px;
     background-color: currentColor;
   }
+
+  @include hover-focus {
+    color: $color-base-3;
+  }
 }
 
 .action__special-image img {

@@ -12,17 +12,7 @@ const swiper2Init = () => {
     touchRatio: 2,
     slidesPerView: 1,
 
-    autoplay: {
-      delay: 2000,
-      stopOnLastSlide: true,
-      disableOnInteraction: false,
-    },
-
     speed: 1000,
-
-    keyboard: {
-      enabled: true,
-    },
 
     navigation: {
       nextEl: '.swiper2-button-next',

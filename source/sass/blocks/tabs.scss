@@ -47,6 +47,13 @@
   border: none;
   cursor: pointer;
 
+  &.is-active {
+    color: $color-base-8;
+
+    box-shadow: 0 -2px 0 0 $color-2 inset;
+    pointer-events: none;
+  }
+
   @include vp-1199 {
     font-size: 18px;
   }
@@ -55,11 +62,8 @@
     font-size: 16px;
   }
 
-  &.is-active {
-    color: $color-base-8;
-
-    box-shadow: 0 -2px 0 0 $color-2 inset;
-    pointer-events: none;
+  @include hover-focus {
+    text-shadow: $color-base-4 1px 0 10px;
   }
 }
 

@@ -634,6 +634,7 @@ button,
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
 }
 
 .wrapper .header,
@@ -1096,6 +1097,10 @@ button,
   border-bottom: 1px solid currentColor;
 }
 
+.stock-card__content a.focus-visible:focus {
+  color: #787878;
+}
+
 .subscription-card {
   padding: 62px 77px;
   width: 100%;
@@ -1208,13 +1213,17 @@ button,
   color: #ffffff;
 }
 
-.trainer-card.focus-visible:focus .trainer-card__back {
+.trainer-card:hover .trainer-card__back,
+.trainer-card:active .trainer-card__back,
+.trainer-card:focus-within .trainer-card__back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trainer-card.focus-visible:focus .trainer-card__front img {
+.trainer-card:hover .trainer-card__front img,
+.trainer-card:active .trainer-card__front img,
+.trainer-card:focus-within .trainer-card__front img {
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -1501,6 +1510,10 @@ button,
   background-color: currentColor;
 }
 
+.action__special-content a.focus-visible:focus {
+  color: #e8e8e8;
+}
+
 .action__special-image img {
   height: 100%;
   width: auto;
@@ -1687,6 +1700,11 @@ button,
   color: #ffffff;
 }
 
+.footer__container a.focus-visible:focus {
+  text-shadow: #ffffff 1px 0 5px;
+  text-decoration: underline;
+}
+
 .footer__logo {
   margin-right: 5px;
   -webkit-transform: translateY(2px);
@@ -1725,6 +1743,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.footer__socials svg {
+  fill: #ffffff;
+}
+
+.footer__socials svg.focus-visible:focus {
+  fill: #e8e8e8;
 }
 
 .header {
@@ -1894,6 +1920,35 @@ button,
   display: none;
 }
 
+.modal--responsive .modal__content {
+  width: 100%;
+}
+
+.modal--fit-content .modal__content {
+  width: auto;
+}
+
+.modal--no-scale {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.modal--preload {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.modal.is-active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal__wrapper {
   position: relative;
   display: -webkit-box;
@@ -1930,44 +1985,23 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
 }
 
-.modal--responsive .modal__content {
-  width: 100%;
+.modal__close-btn svg {
+  fill: #030a1a;
 }
 
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-.modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
+.modal__close-btn svg.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .promo {
@@ -2139,7 +2173,6 @@ button,
 
 .subscriptions {
   padding: 120px 0 123px;
-  position: relative;
   background-color: #f8f9fc;
 }
 
@@ -2161,8 +2194,26 @@ button,
   gap: 40px;
 }
 
+.subscriptions__container .tabs {
+  position: relative;
+  overflow: visible;
+}
+
+.subscriptions__image {
+  position: absolute;
+  bottom: -274px;
+  right: -289px;
+}
+
+.subscriptions__image img {
+  width: 472px;
+  height: auto;
+}
+
 .swiper2 {
   max-width: 49%;
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .swiper-wrapper {
@@ -2253,6 +2304,10 @@ button,
   -webkit-box-shadow: 0 -2px 0 0 #d10a42 inset;
   box-shadow: 0 -2px 0 0 #d10a42 inset;
   pointer-events: none;
+}
+
+.tabs__control.focus-visible:focus {
+  text-shadow: #74819c 1px 0 10px;
 }
 
 .tabs__content {
@@ -2816,6 +2871,15 @@ button,
     align-items: center;
   }
 
+  .subscriptions__image {
+    bottom: -225px;
+    right: -121px;
+  }
+
+  .subscriptions__image img {
+    width: 423px;
+  }
+
   .swiper1 {
     max-width: 87%;
   }
@@ -3148,6 +3212,11 @@ button,
     gap: 33px;
   }
 
+  .features__item--main {
+    margin: 0;
+    width: 100vw;
+  }
+
   .features__item--comfort,
   .features__item--experience {
     -ms-flex-item-align: auto;
@@ -3316,6 +3385,10 @@ button,
     display: none;
   }
 
+  .modal--fit-content .modal__content {
+    width: 100%;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -3323,10 +3396,6 @@ button,
   .modal__content {
     width: 100%;
     padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
   }
 
   .promo {
@@ -3369,6 +3438,10 @@ button,
     margin-right: 10px;
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .subscriptions__image {
+    display: none;
   }
 
   .swiper2 {
@@ -3435,6 +3508,10 @@ button,
     background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
   }
 
+  .stock-card__content a:hover:not(.focus-visible) {
+    color: #787878;
+  }
+
   .subscription-card:hover:not(.focus-visible) {
     background: -o-linear-gradient(307.49deg, #d10a42 0%, #0041ca 87.33%);
     background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
@@ -3458,15 +3535,24 @@ button,
     background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   }
 
-  .trainer-card:hover:not(.focus-visible) .trainer-card__back {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .action__special-content a:hover:not(.focus-visible) {
+    color: #e8e8e8;
   }
 
-  .trainer-card:hover:not(.focus-visible) .trainer-card__front img {
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
+  .footer__container a:hover:not(.focus-visible) {
+    text-shadow: #ffffff 1px 0 5px;
+    text-decoration: underline;
+  }
+
+  .footer__socials svg:hover:not(.focus-visible) {
+    fill: #e8e8e8;
+  }
+
+  .modal__close-btn svg:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .tabs__control:hover:not(.focus-visible) {
+    text-shadow: #74819c 1px 0 10px;
   }
 }

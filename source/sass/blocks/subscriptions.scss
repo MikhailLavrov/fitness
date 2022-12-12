@@ -1,8 +1,6 @@
 .subscriptions {
   padding: 120px 0 123px;
 
-  position: relative;
-
   background-color: $color-base-2;
 
   @include vp-1199 {
@@ -50,5 +48,34 @@
   @include vp-1199 {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.subscriptions__container .tabs {
+  position: relative;
+  overflow: visible;
+}
+
+.subscriptions__image {
+  position: absolute;
+  bottom: -274px;
+  right: -289px;
+
+  @include vp-1199 {
+    bottom: -225px;
+    right: -121px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.subscriptions__image  img{
+  width: 472px;
+  height: auto;
+
+  @include vp-1199 {
+    width: 423px;
   }
 }
