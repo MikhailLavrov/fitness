@@ -1123,6 +1123,7 @@ button,
   gap: 45px;
   color: #102654;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .subscription-card.focus-visible:focus {
@@ -1174,6 +1175,7 @@ button,
   display: flex;
   background-repeat: no-repeat;
   z-index: 5;
+  position: relative;
 }
 
 .subscription-card__price p {
@@ -1203,6 +1205,18 @@ button,
   text-transform: uppercase;
   text-align: center;
   z-index: 5;
+}
+
+.subscription-card__price small {
+  position: absolute;
+  display: block;
+  max-width: 50%;
+  top: 30px;
+  left: -4%;
+  font-weight: 700;
+  font-size: 100px;
+  color: #e8e8e8;
+  opacity: 0.48;
 }
 
 .trainer-card {
@@ -1776,6 +1790,7 @@ button,
 
 .header__phone {
   margin-left: auto;
+  max-width: 30%;
 }
 
 .header__phone a {
@@ -2211,7 +2226,7 @@ button,
 }
 
 .swiper2 {
-  max-width: 49%;
+  max-width: 560px;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
@@ -2406,10 +2421,7 @@ button,
     margin-left: 0;
     -ms-grid-columns: 218px 142px;
     grid-template-columns: 218px 142px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 96px;
   }
 
   .contacts__column div:not(:last-child) {
@@ -2885,7 +2897,7 @@ button,
   }
 
   .swiper2 {
-    max-width: 84%;
+    max-width: 566px;
   }
 
   .swiper1 ~ .swiper-button-prev {
@@ -3051,6 +3063,12 @@ button,
 
   .subscription-card__price span {
     font-size: 51px;
+  }
+
+  .subscription-card__price small {
+    top: 19px;
+    left: -3%;
+    font-size: 80px;
   }
 
   .trainer-card {
@@ -3328,6 +3346,10 @@ button,
     height: auto;
   }
 
+  .header__phone {
+    max-width: 50%;
+  }
+
   .header__phone a {
     font-weight: 600;
     font-size: 20px;
@@ -3445,7 +3467,7 @@ button,
   }
 
   .swiper2 {
-    max-width: 100%;
+    max-width: 226px;
   }
 
   .swiper ~ .swiper-button-prev,

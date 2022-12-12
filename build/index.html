@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/robotocondensed-regular.woff2" as="font">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">  <!-- 180×180 -->
     <meta name="description" content="Современный фитнес-центр в Омске">
     <title>Supergym Fitness</title>
   </head>
@@ -56,8 +61,8 @@
               <h2>Тренажерный зал</h2>
               <span>Просторный зал площадью 900 кв/м</span>
               <div class="about__content-story">
-                <p>Supergym – самый большой фитнес <br>центр за Уралом и идеальное место <br>для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-                <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+                <p>Supergym – самый большой фитнес <br>центр за&nbsp;Уралом и&nbsp;идеальное место <br>для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для&nbsp;всех спортсменов.</p>
+                <p>В&nbsp;зале расположены отдельная зона для&nbsp;Crossfit и кардио-зона с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
               </div>
             </div>
             <div class="about__image">
@@ -71,7 +76,7 @@
                 <source type="image/webp" srcset="./img/video-thumb.webp 1x, ./img/video-thumb@2x.webp 2x">
                 <img width="364" height="228" src="./img/video-thumb.jpg" alt="Превью картинка видео презентации тренажерного зала." srcset="./img/video-thumb@2x.jpg 2x">
               </picture>
-              <button class="about__play-button play-button" type="button" data-open-modal="feedback">
+              <button class="about__play-button play-button" type="button" data-open-modal="feedback"  aria-label="Воспроизвести видео.">
                 <svg width="17" height="17" role="img" aria-hidden="true" focusable="false" aria-label="Иконка плей.">
                   <use xlink:href="img/sprite.svg#play-button-triangle"></use>
                 </svg>
@@ -86,9 +91,9 @@
 
             <div class="tabs no-transition-global" data-tabs="parent" data-delay="300">
               <div class="tabs__controls" data-tabs="controls">
-                <button class="tabs__control" type="button" data-tabs="control">1 месяц</button>
-                <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
-                <button class="tabs__control" type="button" data-tabs="control">12 месяцев</button>
+                <button class="tabs__control" type="button" data-tabs="control" aria-label="Предложения на 1 месяц.">1 месяц</button>
+                <button class="tabs__control" type="button" data-tabs="control" aria-label="Предложения на 6 месяцев.">6 месяцев</button>
+                <button class="tabs__control" type="button" data-tabs="control" aria-label="Предложения на 12 месяцев.">12 месяцев</button>
               </div>
               <div class="tabs__content" data-tabs="content">
                 <div class="tabs__element" data-tabs="element">
@@ -99,9 +104,10 @@
                         <h3>С тренером</h3>
                         <p>12 занятий</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>5000</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -111,9 +117,10 @@
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>1700</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -123,9 +130,10 @@
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>2700</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -140,9 +148,10 @@
                         <h3>С тренером</h3>
                         <p>12 занятий в месяц</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>30000</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -152,9 +161,10 @@
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>1650</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -164,9 +174,10 @@
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>2600</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -181,9 +192,10 @@
                         <h3>С тренером</h3>
                         <p>12 занятий в месяц</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>60000</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -193,9 +205,10 @@
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>1600</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -205,9 +218,10 @@
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                       </div>
-                      <div class="subscription-card__price" style="background-image: url(../img/svg/subscription-card-price.svg);">
+                      <div class="subscription-card__price">
                         <p>2500</p>
                         <span>&#8381;</span>
+                        <small></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -443,7 +457,7 @@
                     </div>
                     <div class="feature-card__description">
                       <p>Площадь</p>
-                      <span>Занимайтесь без очередей и&nbsp;толпучки</span>
+                      <span>Занимайтесь без&nbsp;очередей и&nbsp;толпучки</span>
                     </div>
                   </div>
                 </li>
@@ -455,7 +469,7 @@
                     </div>
                     <div class="feature-card__description">
                       <p>Собственная парковка</p>
-                      <span>Вы всегда найдете место для своей машины на нашей парковке</span>
+                      <span>Вы всегда найдете место для своей машины на&nbsp;нашей парковке</span>
                     </div>
                   </div>
                 </li>
@@ -479,7 +493,7 @@
                     </div>
                     <div class="feature-card__description">
                       <p>Тренерский опыт</p>
-                      <span>Добивайтесь своих целей быстрее с профессиональным тренером</span>
+                      <span>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</span>
                     </div>
                   </div>
                 </li>
@@ -517,7 +531,7 @@
                 <div class="stock-card">
                   <div class="stock-card__content">
                     <p>Месяц бесплатно</p>
-                    <span>Приведи друга, получи <br>абонемент в подарок</span>
+                    <span>Приведи друга, получи <br>абонемент в&nbsp;подарок</span>
                     <a href="#">Подробнее</a>
                   </div>
                 </div>
@@ -590,7 +604,7 @@
                         <input type="tel" id="phone" placeholder="Телефон" name="phone" title="Допускается ввод только цифр, пробелов и символов +)(-" pattern="\+?[0-9\s\-\(\)]+" maxlength="30" required>
                       </div>
                     </div>
-                    <button class="free-training__button button button--light" type="submit" form="free-training-form">Отправить</button>
+                    <button class="free-training__button button button--light" type="submit" form="free-training-form"  aria-label="Отправить заявку.">Отправить</button>
                   </fieldset>
                 </form>
               </div>
@@ -696,10 +710,10 @@
         <div class="modal__content">
 
           <div class="embed-container" data-iframe>
-            <iframe src="https://www.youtube.com/embed//9TZXsZItgdw" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed//9TZXsZItgdw" allowfullscreen loading="lazy"></iframe>
           </div>
 
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>
             <svg width="15" height="15" role="img" aria-hidden="true" focusable="false" aria-label="Иконка закрытия модального окна.">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>

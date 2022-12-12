@@ -84,8 +84,7 @@
     max-width: 100%;
     margin-left: 0;
     grid-template-columns: 218px 142px;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 96px;
   }
 
   @include vp-767 {

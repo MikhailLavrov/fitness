@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs/init-tabs';
 import {swiperInit} from './modules/swiper/swiperInit';
 import {swiper2Init} from './modules/swiper/swiper2Init';
+import {getPriceBg} from './utils/getPriceBg';
 
 // ---------------------------------
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  getPriceBg();
 
   // Modules
   // ---------------------------------

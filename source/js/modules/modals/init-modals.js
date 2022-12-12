@@ -28,6 +28,11 @@ const settings = {
 
 const initModals = () => {
   const modalElements = document.querySelectorAll('.modal');
+
+  if (!modalElements) {
+    return;
+  }
+
   modalElements.forEach((el) => {
     setTimeout(() => {
       el.classList.remove('modal--preload');

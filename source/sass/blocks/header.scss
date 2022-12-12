@@ -38,6 +38,12 @@
 
 .header__phone {
   margin-left: auto;
+
+  max-width: 30%;
+
+  @include vp-767 {
+    max-width: 50%;
+  }
 }
 
 .header__phone a {
