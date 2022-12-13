@@ -3,6 +3,8 @@
 @import "mixins";
 @import "variables";
 // import Swiper and modules styles
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
 
 // Global
 @import "global/container";
