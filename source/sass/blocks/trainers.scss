@@ -48,27 +48,3 @@
 .trainers__swiper-wrapper {
   position: relative;
 }
-
-.trainers__swiper-wrapper .swiper-button-prev {
-  width: auto;
-  height: auto;
-
-  position: absolute;
-  top: 50%;
-  left: -50px;
-
-  z-index: 30;
-  cursor: pointer;
-}
-
-.trainers__swiper-wrapper .swiper-button-next {
-  width: auto;
-  height: auto;
-
-  position: absolute;
-  top: 50%;
-  right: -50px;
-
-  z-index: 30;
-  cursor: pointer;
-}

@@ -2575,6 +2575,9 @@ button,
   height: 32px;
   top: 52%;
   color: #afafaf;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 
 .swiper ~ .swiper-button-prev::after,
@@ -2690,26 +2693,6 @@ button,
 
 .trainers__swiper-wrapper {
   position: relative;
-}
-
-.trainers__swiper-wrapper .swiper-button-prev {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: -50px;
-  z-index: 30;
-  cursor: pointer;
-}
-
-.trainers__swiper-wrapper .swiper-button-next {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  right: -50px;
-  z-index: 30;
-  cursor: pointer;
 }
 
 @media (max-width: 1199px) {

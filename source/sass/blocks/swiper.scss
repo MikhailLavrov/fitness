@@ -37,6 +37,10 @@
   top: 52%;
   color: $color-9;
 
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
   @include vp-767 {
     width: 10px;
     height: 19px;
