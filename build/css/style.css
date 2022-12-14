@@ -1696,6 +1696,10 @@ button,
   display: none;
 }
 
+.about__decor {
+  position: relative;
+}
+
 .about__image {
   max-height: 401px;
   display: -webkit-box;
@@ -1715,10 +1719,9 @@ button,
 }
 
 .about__video {
-  margin-left: 35px;
   position: absolute;
   top: 289px;
-  left: calc(50% - 177px);
+  left: -63px;
   background-color: #102654;
 }
 
@@ -2888,19 +2891,19 @@ button,
   .about__image {
     max-height: 100%;
     display: block;
+    aspect-ratio: 16.9/8.6;
   }
 
   .about__image img {
     width: 100%;
     height: auto;
-    max-height: 345px;
     -o-object-position: initial;
     object-position: initial;
   }
 
   .about__video {
-    margin-left: 44px;
-    top: 488px;
+    left: calc(50% - 133px);
+    top: 76%;
   }
 
   .about__video img {
@@ -3459,6 +3462,7 @@ button,
 
   .about__image {
     margin-bottom: 40px;
+    aspect-ratio: auto;
   }
 
   .about__image img {

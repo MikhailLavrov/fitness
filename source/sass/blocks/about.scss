@@ -127,6 +127,10 @@
   }
 }
 
+.about__media-content {
+  position: relative;
+}
+
 .about__image {
   max-height: 401px;
 
@@ -137,10 +141,14 @@
     max-height: 100%;
 
     display: block;
+
+    aspect-ratio: 16.9 / 8.6;
   }
 
   @include vp-767 {
     margin-bottom: 40px;
+
+    aspect-ratio: auto;
   }
 }
 
@@ -153,7 +161,6 @@
   @include vp-1199 {
     width: 100%;
     height: auto;
-    max-height: 345px;
 
     object-position: initial;
   }
@@ -173,11 +180,9 @@
 }
 
 .about__video {
-  margin-left: 35px;
-
   position: absolute;
   top: 289px;
-  left: calc(50% - 354px / 2);
+  left: -63px;
 
   background-color: $color-base-8;
 
@@ -193,16 +198,15 @@
   }
 
   @include vp-1199 {
-    margin-left: 44px;
+    left: calc(50% - 266px / 2);
 
-    top: 488px;
+    top: 76%;
   }
 
   @include vp-767 {
     margin: 0;
     margin-left: -$secondary-indent;
     padding-top: calc(185 / 320 * 100%);
-    //padding-top calculation => calc(height/width * 100%)
 
     width: 100vw;
     height: 0;
