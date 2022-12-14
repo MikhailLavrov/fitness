@@ -3500,8 +3500,8 @@ button,
   .action__special {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[2];
-    grid-template-rows: repeat(2, 1fr);
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
   }
 
   .action__special-content {
@@ -3520,11 +3520,18 @@ button,
     text-align: center;
   }
 
+  .action__special-content a {
+    margin-top: 30px;
+  }
+
+  .action__special-image {
+    margin-bottom: -13%;
+    height: 100%;
+  }
+
   .action__special-image img {
     margin: 0 auto;
     width: 100%;
-    max-width: 290px;
-    max-height: 299px;
     -o-object-position: top;
     object-position: top;
   }
