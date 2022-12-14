@@ -3464,7 +3464,9 @@ button,
   .about__image img {
     margin: 0 auto;
     margin-left: -15px;
-    height: 313px;
+    height: auto;
+    min-height: 313px;
+    max-height: 100%;
     width: 100vw;
     max-width: 100vw;
     -o-object-position: right;
