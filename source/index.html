@@ -635,34 +635,30 @@
       </main>
       <footer class="footer">
         <div class="footer__container container">
-          <div class="footer__logo">
-            <a>
-              <picture>
-                <source media="(max-width: 1199px)" type="image/svg+xml" srcset="./img/svg/logo-thick.svg">
-                <img class="footer__logo" src="./img/svg/logo-thin.svg" width="88" height="15" alt="Логотип компании.">
-              </picture>
-            </a>
-          </div>
           <div class="footer__nav">
             <ul>
-              <li class="footer__nav-item footer__nav-item--logo">
+              <li>
                 <a>
-                  <img src="./img/svg/logo-thin.svg" width="68" height="15" alt="Логотип компании.">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/svg+xml" srcset="./img/svg/logo-thin.svg">
+                    <source media="(max-width: 1199px)" type="image/svg+xml" srcset="./img/svg/logo-thick.svg">
+                    <img class="footer__logo" src="./img/svg/logo-thin.svg" width="88" height="15" alt="Логотип компании.">
+                  </picture>
                 </a>
               </li>
-              <li class="footer__nav-item footer__nav-item--services">
+              <li>
                 <a href="#about">Услуги</a>
               </li>
-              <li class="footer__nav-item footer__nav-item--subscriptions">
+              <li>
                 <a href="#subscriptions">Абонементы</a>
               </li>
-              <li class="footer__nav-item footer__nav-item--action">
+              <li>
                 <a href="#action">Акции</a>
               </li>
-              <li class="footer__nav-item footer__nav-item--trainers">
+              <li>
                 <a href="#trainers">Тренеры</a>
               </li>
-              <li class="footer__nav-item footer__nav-item--timetable">
+              <li>
                 <a href="#promo">Расписание</a>
               </li>
             </ul>

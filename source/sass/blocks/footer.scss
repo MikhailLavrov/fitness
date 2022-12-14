@@ -1,12 +1,12 @@
 .footer {
-  padding: 38px 0;
+  padding: 42px 0;
 
   color: $color-base-1;
 
   background-color: $color-base-7;
 
   @include vp-1199 {
-    padding: 41px 0;
+    padding: 45px 0 37px;
   }
 
   @include vp-767 {
@@ -15,12 +15,13 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 68.5% calc(100% - 68.5%);
 
   @include vp-1199 {
     padding: 0 39px;
+
+    grid-template-columns: 78% calc(100% - 78%);
   }
 
   @include vp-767 {
@@ -55,97 +56,78 @@
 }
 
 .footer__logo {
-  margin-right: 5px;
-
-  transform: translateY(2px);
+  transform: translateY(4px);
 
   @include vp-1199 {
-    margin-right: 15px;
-
     width: 82px;
     height: 18px;
 
-    transform: translate(3px, 0);
+    transform: translate(6px, -2px);
   }
 
   @include vp-767 {
-    display: none;
+    width: 68px;
+    height: 15px;
+
+    transform: none;
   }
 }
 
-.footer__nav {
-  max-width: 45%;
+.footer__nav,
+.footer__socials {
+  align-self: center;
+}
 
-  @include vp-1199 {
-    max-width: 57%;
-  }
-
-  @include vp-767 {
-    max-width: 100%;
-  }
+.footer__socials {
+  max-width: 97px;
+  justify-self: end;
 }
 
 .footer__nav ul {
   display: flex;
   align-items: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
 
   @include vp-1199 {
-    gap: 31px;
+    gap: 30px;
   }
 
   @include vp-767 {
-    margin-bottom: 33px;
+    margin-bottom: 17px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px 30px;
+    display: block;
+    column-count: 2;
   }
 }
 
-.footer__nav-item {
-  &--logo {
-    display: none;
+.footer__nav li {
+  &:first-child {
+    margin-right: auto;
 
     @include vp-767 {
-      display: block;
+      margin: 4px 0 21px;
     }
   }
 
-  &--services {
-    @include vp-767 {
-      grid-row: 2;
-      grid-column: 1;
-    }
-  }
-
-  &--action {
-    @include vp-767 {
-      grid-row: 1;
-      grid-column: 2;
-    }
-  }
-
-  &--trainers {
-    @include vp-767 {
-      grid-row: 2;
-      grid-column: 2;
-    }
+  @include vp-767 {
+    margin-bottom: 16px;
   }
 }
 
 .footer__socials ul {
-  max-width: 150px;
+  max-width: 97px;
 
-  display: flex;
   flex-wrap: wrap;
   gap: 11px;
-  align-items: center;
+  justify-content: flex-end;
+}
 
-  @include vp-767 {
-    max-width: 100%;
-  }
+.footer__socials ul,
+.footer__socials li,
+.footer__socials a {
+  display: flex;
+  align-items: center;
 }
 
 .footer__socials svg {
