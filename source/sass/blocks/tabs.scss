@@ -69,6 +69,37 @@
 
 .tabs__content {
   transition: height 0.3s;
+
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 321px;
+    height: 384px;
+    bottom: -218px;
+    right: -212px;
+    transform: rotate(330deg);
+    background-image: url("../img/barbel-disks.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/barbel-disks@2x.png");
+    }
+
+    @include vp-1199 {
+      width: 289px;
+      height: 345px;
+      bottom: -176px;
+      right: -55px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .tabs__element {

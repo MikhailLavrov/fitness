@@ -2654,6 +2654,23 @@ button,
   -webkit-transition: height 0.3s;
   -o-transition: height 0.3s;
   transition: height 0.3s;
+  position: relative;
+}
+
+.tabs__content::after {
+  position: absolute;
+  content: "";
+  width: 321px;
+  height: 384px;
+  bottom: -218px;
+  right: -212px;
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+  background-image: url("../img/barbel-disks.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .tabs__element {
@@ -3231,6 +3248,13 @@ button,
     font-size: 18px;
   }
 
+  .tabs__content::after {
+    width: 289px;
+    height: 345px;
+    bottom: -176px;
+    right: -55px;
+  }
+
   .trainers {
     padding: 50px 0 100px;
   }
@@ -3805,6 +3829,10 @@ button,
     font-size: 16px;
   }
 
+  .tabs__content::after {
+    display: none;
+  }
+
   .trainers {
     padding: 34px 0 70px;
   }
@@ -3881,5 +3909,11 @@ button,
 
   .tabs__control:hover:not(.focus-visible) {
     text-shadow: #74819c 1px 0 10px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .tabs__content::after {
+    background-image: url("../img/barbel-disks@2x.png");
   }
 }
