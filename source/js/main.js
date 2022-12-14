@@ -1,8 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs/init-tabs';
-import {swiperInit} from './modules/swiper/swiperInit';
-import {swiper2Init} from './modules/swiper/swiper2Init';
+import {trainersSliderInit} from './modules/swiper/trainersSliderInit';
+import {reviewsSliderInit} from './modules/swiper/reviewsSliderInit';
 import {getPriceBg} from './utils/getPriceBg';
 
 // ---------------------------------
@@ -23,8 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initTabs();
-    swiperInit();
-    swiper2Init();
+    trainersSliderInit();
+    reviewsSliderInit();
   });
 });
 

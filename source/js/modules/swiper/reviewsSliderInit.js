@@ -2,9 +2,9 @@
 import Swiper, {Navigation} from 'swiper';
 
 // init Swiper:
-const swiper2Init = () => {
+const reviewsSliderInit = () => {
   // eslint-disable-next-line no-new
-  new Swiper('.swiper2', {
+  new Swiper('.reviews-swiper', {
     // configure Swiper to use modules
     modules: [Navigation],
     loop: false,
@@ -15,10 +15,10 @@ const swiper2Init = () => {
     speed: 1000,
 
     navigation: {
-      nextEl: '.swiper2-button-next',
-      prevEl: '.swiper2-button-prev',
+      nextEl: '.reviews-swiper-button-next',
+      prevEl: '.reviews-swiper-button-prev',
     },
   });
 };
 
-export {swiper2Init};
+export {reviewsSliderInit};

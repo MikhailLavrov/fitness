@@ -106,7 +106,7 @@
                       <div class="subscription-card__price">
                         <p>5000</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -119,7 +119,7 @@
                       <div class="subscription-card__price">
                         <p>1700</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -132,7 +132,7 @@
                       <div class="subscription-card__price">
                         <p>2700</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -150,7 +150,7 @@
                       <div class="subscription-card__price">
                         <p>30000</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -163,7 +163,7 @@
                       <div class="subscription-card__price">
                         <p>1650</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -176,7 +176,7 @@
                       <div class="subscription-card__price">
                         <p>2600</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -194,7 +194,7 @@
                       <div class="subscription-card__price">
                         <p>60000</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -207,7 +207,7 @@
                       <div class="subscription-card__price">
                         <p>1600</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -220,7 +220,7 @@
                       <div class="subscription-card__price">
                         <p>2500</p>
                         <span>&#8381;</span>
-                        <small></small>
+                        <small aria-hidden="true"></small>
                       </div>
                       <a class="subscription-card__link button button--dark" href="#">Купить абонемент</a>
                     </div>
@@ -264,7 +264,7 @@
           <div class="trainers__container container">
             <h2>Тренеры</h2>
             <div class="trainers__swiper-wrapper">
-              <div class="swiper swiper1">
+              <div class="swiper trainers-swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
@@ -273,7 +273,7 @@
                       <div class="trainer-card__front">
                         <picture>
                           <source type="image/webp" srcset="./img/trainers/anna.webp 1x, ./img/trainers/anna@2x.webp 2x">
-                          <img width="260" height="294" src="./img/trainers/anna.jpg" alt="Тренер Анна." srcset="./img/trainers/anna@2x.jpg 2x">
+                          <img class="trainer-card__image" width="260" height="294" src="./img/trainers/anna.jpg" alt="Тренер Анна." srcset="./img/trainers/anna@2x.jpg 2x">
                         </picture>
                         <h3>Анна Павлова</h3>
                       </div>
@@ -430,8 +430,8 @@
                   </div>
                 </div>
               </div>
-              <button class="swiper1-button-prev swiper-button-prev"></button>
-              <button class="swiper1-button-next swiper-button-next"></button>
+              <button class="trainers-swiper-button-prev swiper-button-prev"></button>
+              <button class="trainers-swiper-button-next swiper-button-next"></button>
             </div>
 
           </div>
@@ -544,7 +544,7 @@
           <div class="reviews__container container">
             <h2>Отзывы</h2>
             <div class="reviews__swiper-wrapper">
-              <div class="swiper2 swiper">
+              <div class="reviews-swiper swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
@@ -574,8 +574,8 @@
                   </div>
                 </div>
               </div>
-              <button class="swiper2-button-prev swiper-button-prev"></button>
-              <button class="swiper2-button-next swiper-button-next"></button>
+              <button class="reviews-swiper-button-prev swiper-button-prev"></button>
+              <button class="reviews-swiper-button-next swiper-button-next"></button>
             </div>
           </div>
         </section>
@@ -638,7 +638,7 @@
           <div class="footer__logo">
             <a>
               <picture>
-                <source media="(max-width: 1199px)" type="image/webp" srcset="./img/svg/logo-thick.svg">
+                <source media="(max-width: 1199px)" type="image/svg+xml" srcset="./img/svg/logo-thick.svg">
                 <img class="footer__logo" src="./img/svg/logo-thin.svg" width="88" height="15" alt="Логотип компании.">
               </picture>
             </a>
