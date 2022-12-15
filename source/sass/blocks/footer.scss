@@ -16,12 +16,10 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: 68.5% calc(100% - 68.5%);
+  grid-template-columns: auto auto;
 
   @include vp-1199 {
     padding: 0 39px;
-
-    grid-template-columns: 78% calc(100% - 78%);
   }
 
   @include vp-767 {
@@ -78,11 +76,6 @@
   align-self: center;
 }
 
-.footer__socials {
-  max-width: 97px;
-  justify-self: end;
-}
-
 .footer__nav ul {
   display: flex;
   align-items: center;
@@ -112,6 +105,21 @@
 
   @include vp-767 {
     margin-bottom: 16px;
+  }
+}
+
+.footer__socials {
+  margin-left: 30px;
+
+  max-width: 97px;
+  justify-self: end;
+
+  @include vp-1199 {
+    margin-left: 15px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
   }
 }
 
