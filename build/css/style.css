@@ -1021,17 +1021,20 @@ button,
   border: none;
   cursor: pointer;
   background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .button--light {
   color: #ffffff;
-  -webkit-box-shadow: 0 0 0 4px currentColor inset;
-  box-shadow: 0 0 0 4px currentColor inset;
+  -webkit-box-shadow: 0 0 0 4px #ffffff inset;
+  box-shadow: 0 0 0 4px #ffffff inset;
 }
 
 .button--light.focus-visible:focus {
-  -webkit-box-shadow: 0 0 0 4px #e8e8e8 inset;
-  box-shadow: 0 0 0 4px #e8e8e8 inset;
+  background-color: #ffffff;
+  color: #1c3374;
 }
 
 .button--dark {
@@ -3859,8 +3862,8 @@ button,
 
 @media (hover: hover) {
   .button--light:hover:not(.focus-visible) {
-    -webkit-box-shadow: 0 0 0 4px #e8e8e8 inset;
-    box-shadow: 0 0 0 4px #e8e8e8 inset;
+    background-color: #ffffff;
+    color: #1c3374;
   }
 
   .button--dark:hover:not(.focus-visible) {

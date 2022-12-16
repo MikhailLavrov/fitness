@@ -13,13 +13,16 @@
   cursor: pointer;
   background-color: transparent;
 
+  transition: all $trans-default;
+
   &--light {
     color: $color-base-1;
 
-    box-shadow: 0 0 0 4px currentColor inset;
+    box-shadow: 0 0 0 4px $color-base-1 inset;
 
     @include hover-focus {
-      box-shadow: 0 0 0 4px $color-base-3 inset;
+      background-color: $color-base-1;
+      color: $color-base-6;
     }
   }
 
