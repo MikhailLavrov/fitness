@@ -1021,9 +1021,13 @@ button,
   border: none;
   cursor: pointer;
   background-color: transparent;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .button--light {
@@ -1324,8 +1328,10 @@ button,
   display: grid;
   -ms-grid-columns: 80px minmax(auto, 328px);
   grid-template-columns: 80px minmax(auto, 328px);
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
+  -ms-grid-rows: -webkit-min-content auto;
+  -ms-grid-rows: min-content auto;
+  grid-template-rows: -webkit-min-content auto;
+  grid-template-rows: min-content auto;
   gap: 13px 28px;
   color: #ffffff;
   background-color: #1c3374;
@@ -1420,6 +1426,10 @@ button,
   line-height: 14px;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .stock-card__content a.focus-visible:focus {
@@ -1840,6 +1850,10 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .action__special-content a::after {
@@ -1859,8 +1873,8 @@ button,
 .action__special-image img {
   height: 100%;
   width: auto;
-  -o-object-position: center;
-  object-position: center;
+  -o-object-position: 36%;
+  object-position: 36%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2050,9 +2064,8 @@ button,
 
 .footer__nav,
 .footer__socials {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .footer__nav ul {
@@ -2543,9 +2556,10 @@ button,
 }
 
 .subscriptions__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -2585,6 +2599,10 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.swiper-slide .trainer-card {
+  max-width: 100%;
 }
 
 .swiper ~ .swiper-button-prev,
@@ -2853,10 +2871,6 @@ button,
 
   .trainer-card {
     max-width: 268px;
-  }
-
-  .trainer-card__front img {
-    max-height: 294px;
   }
 
   .about {
@@ -3213,6 +3227,9 @@ button,
   }
 
   .subscriptions__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3419,11 +3436,6 @@ button,
 
   .trainer-card {
     max-width: 226px;
-  }
-
-  .trainer-card__front img {
-    max-height: 274px;
-    height: 274px;
   }
 
   .trainer-card__back {
@@ -3714,12 +3726,21 @@ button,
     max-width: 100%;
     -ms-grid-columns: minmax(115px, 50%) auto;
     grid-template-columns: minmax(115px, 50%) auto;
-    gap: 55px 15px;
+    gap: 0 15px;
+  }
+
+  .hero__features-list {
+    justify-self: flex-end;
   }
 
   .hero__features-list ul {
     margin-top: 118px;
+    margin-left: -136px;
     overflow: hidden;
+  }
+
+  .hero__description {
+    justify-self: flex-start;
   }
 
   .hero__description p {
@@ -3731,13 +3752,12 @@ button,
 
   .hero__description h1 {
     margin-bottom: 24px;
-    margin-left: auto;
+    margin-left: -50px;
     max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
     font-size: 70px;
     line-height: 86px;
-    position: absolute;
     right: 0;
     overflow: hidden;
   }

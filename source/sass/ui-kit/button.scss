@@ -12,8 +12,9 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
+  user-select: none;
 
-  transition: all $trans-default;
+  transition: background-color $trans-default;
 
   &--light {
     color: $color-base-1;

@@ -5,7 +5,7 @@
 
   display: grid;
   grid-template-columns: 80px minmax(auto, 328px);
-  grid-template-rows: auto auto;
+  grid-template-rows: min-content auto;
   gap: 13px 28px;
 
   color: $color-base-1;

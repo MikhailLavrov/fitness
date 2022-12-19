@@ -135,6 +135,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-base-1;
+  user-select: none;
 
   &::after {
     width: 100%;
@@ -167,7 +168,7 @@
   height: 100%;
   width: auto;
 
-  object-position: center;
+  object-position: 36%;
   object-fit: cover;
 
   @include vp-767 {

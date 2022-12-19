@@ -42,10 +42,12 @@
 }
 
 .subscriptions__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }

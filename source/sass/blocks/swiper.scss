@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.swiper-slide .trainer-card {
+  max-width: 100%;
+}
+
 .swiper ~ .swiper-button-prev,
 .swiper ~ .swiper-button-next {
   width: 16px;

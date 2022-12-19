@@ -50,7 +50,13 @@
     max-width: 100%;
 
     grid-template-columns: minmax(115px, 50%) auto;
-    gap: 55px 15px;
+    gap: 0 15px;
+  }
+}
+
+.hero__features-list {
+  @include vp-767 {
+    justify-self: flex-end;
   }
 }
 
@@ -69,6 +75,7 @@
 
   @include vp-767 {
     margin-top: 118px;
+    margin-left: -136px;
 
     overflow: hidden;
   }
@@ -83,6 +90,10 @@
 
 .hero__description {
   position: relative;
+
+  @include vp-767 {
+    justify-self: flex-start;
+  }
 }
 
 .hero__description p {
@@ -135,14 +146,15 @@
 
   @include vp-767 {
     margin-bottom: 24px;
-    margin-left: auto;
+    // margin-left: auto;
+    margin-left: -50px;
 
     max-width: min-content;
 
     font-size: 70px;
     line-height: 86px;
 
-    position: absolute;
+    // position: absolute;
     right: 0;
 
     overflow: hidden;

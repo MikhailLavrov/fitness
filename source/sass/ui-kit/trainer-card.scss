@@ -50,15 +50,6 @@
   width: 100%;
 
   object-fit: cover;
-
-  @include vp-1199 {
-    max-height: 294px;
-  }
-
-  @include vp-767 {
-    max-height: 274px;
-    height: 274px;
-  }
 }
 
 .trainer-card__back {
