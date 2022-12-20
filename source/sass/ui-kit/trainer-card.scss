@@ -1,10 +1,7 @@
 .trainer-card {
   width: 100%;
-  max-width: 260px;
 
   position: relative;
-
-  background-color: $color-base-8;
 
   color: $color-base-1;
 
@@ -20,12 +17,8 @@
     }
   }
 
-  @include vp-1199 {
-    max-width: 268px;
-  }
-
   @include vp-767 {
-    max-width: 226px;
+    padding: 0 16px;
   }
 }
 
@@ -48,6 +41,11 @@
 
 .trainer-card__front img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 274px;
+
+  display: block;
 
   object-fit: cover;
 }
@@ -56,7 +54,6 @@
   padding: 52px 40px;
 
   height: 100%;
-  width: 100%;
 
   display: none;
   flex-direction: column;
@@ -70,7 +67,12 @@
   overflow: auto;
 
   @include vp-767 {
-    padding: 42px 19px;
+    padding: 42px 16px;
+
+    width: auto;
+
+    left: 16px;
+    right: 16px;
   }
 }
 

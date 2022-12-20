@@ -1556,9 +1556,7 @@ button,
 
 .trainer-card {
   width: 100%;
-  max-width: 260px;
   position: relative;
-  background-color: #102654;
   color: #ffffff;
 }
 
@@ -1594,6 +1592,10 @@ button,
 
 .trainer-card__front img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 274px;
+  display: block;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1601,7 +1603,6 @@ button,
 .trainer-card__back {
   padding: 52px 40px;
   height: 100%;
-  width: 100%;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2869,10 +2870,6 @@ button,
     max-width: 208px;
   }
 
-  .trainer-card {
-    max-width: 268px;
-  }
-
   .about {
     padding: 100px 0;
   }
@@ -3435,11 +3432,14 @@ button,
   }
 
   .trainer-card {
-    max-width: 226px;
+    padding: 0 16px;
   }
 
   .trainer-card__back {
-    padding: 42px 19px;
+    padding: 42px 16px;
+    width: auto;
+    left: 16px;
+    right: 16px;
   }
 
   .ui-kit-page {
