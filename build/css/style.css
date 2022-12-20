@@ -2027,7 +2027,7 @@ button,
 }
 
 .footer {
-  padding: 42px 0;
+  padding: 42px 0 22px;
   color: #ffffff;
   background-color: #030a1a;
 }
@@ -2070,19 +2070,21 @@ button,
 }
 
 .footer__nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (-webkit-max-content)[5];
+  -ms-grid-columns: 1fr (max-content)[5];
+  grid-template-columns: 1fr repeat(5, -webkit-max-content);
+  grid-template-columns: 1fr repeat(5, max-content);
+  gap: 2px 40px;
 }
 
 .footer__nav li:first-child {
+  margin-top: 4px;
   margin-right: auto;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 9;
+  grid-row: 1/10;
 }
 
 .footer__socials {
@@ -2870,6 +2872,14 @@ button,
     max-width: 208px;
   }
 
+  .trainer-card__front img {
+    aspect-ratio: 10/11;
+  }
+
+  .trainer-card__back {
+    width: 100%;
+  }
+
   .about {
     padding: 100px 0;
   }
@@ -3064,7 +3074,7 @@ button,
   }
 
   .footer {
-    padding: 45px 0 37px;
+    padding: 45px 0 30px;
   }
 
   .footer__container {
@@ -3080,7 +3090,7 @@ button,
   }
 
   .footer__nav ul {
-    gap: 30px;
+    gap: 2px 30px;
   }
 
   .footer__socials {
@@ -3433,6 +3443,10 @@ button,
 
   .trainer-card {
     padding: 0 16px;
+  }
+
+  .trainer-card__front img {
+    aspect-ratio: auto;
   }
 
   .trainer-card__back {
